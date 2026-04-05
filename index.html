@@ -251,6 +251,15 @@
             min-height: 44px;
             min-width: 44px;
         }
+        
+        /* Vietnamese text rendering utilities */
+        .vietnamese-text {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.7;
+            font-feature-settings: "liga" 1;
+        }
     </style>
 </head>
 <body class="font-body text-on-surface select-none">
@@ -277,7 +286,7 @@
     </header>
 
     <main class="pt-16 pb-20 md:pb-8 min-h-screen px-4 md:px-8 relative overflow-hidden flex flex-col md:flex-row gap-8">
-        <aside class="flex flex-col gap-8 py-4 w-20 md:w-24 shrink-0 items-center">
+        <aside class="flex flex-row md:flex-col gap-4 md:gap-8 py-4 w-full md:w-24 shrink-0 items-center">
             <div class="group flex flex-col items-center gap-1 cursor-pointer">
                 <div class="w-12 h-12 bg-tertiary-container border-2 border-black flex items-center justify-center window-shadow hover:scale-110 transition-transform">
                     <span class="material-symbols-outlined text-3xl">desktop_windows</span>
@@ -355,12 +364,18 @@
                 </div>
                 
                 <div class="p-6 h-full min-h-[300px] bg-surface-container-lowest inset-shadow overflow-y-auto font-mono text-xs leading-relaxed">
-                    <p class="mb-4">SYSTEM LOG: 2024.WSAF.V1</p>
-                    <p class="mb-4 text-secondary font-bold underline">World Simp And Friends (WSAF)</p>
-                    <p class="mb-4 italic">Ban đầu được biết đến là 'World Lọt Hố'...</p>
-                    <p>WSAF ra đời với sứ mệnh kết nối những tâm hồn sáng tạo. Chúng tôi không chỉ là một đội ngũ kỹ thuật; chúng tôi là những người kể chuyện qua hình ảnh và trải nghiệm.</p>
-                    <p class="mt-4 border-t-2 border-black pt-4">Bọn mình cam kết mang đến những sản phẩm chất lượng nhất, từ việc xây dựng bộ nhận diện thương hiệu đến tổ chức các sự kiện quy mô lớn.</p>
-                </div>
+    <p class="mb-4 font-bold">SYSTEM LOG: 2024.WSAF.V1</p>
+
+    <p class="mb-2 text-secondary font-bold">[ WHO WE ARE ]</p>
+    <p class="mb-4">WORLD SIMP AND FRIENDS</p>
+    <p class="mb-4 text-on-surface-variant">Team hỗ trợ và xây dựng cộng đồng tại Việt Nam</p>
+
+    <p class="mb-2 text-secondary font-bold">[ WHAT WE DO ]</p>
+    <p class="mb-4">• Tổ chức sự kiện<br>• Xây dựng cộng đồng<br>• Thiết kế sáng tạo</p>
+
+    <p class="mb-2 text-secondary font-bold">[ MISSION ]</p>
+    <p>Kết nối những người cùng đam mê</p>
+</div>
             </section>
 
             <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
@@ -370,7 +385,7 @@
                         <span class="text-xs font-bold font-headline uppercase tracking-tight">C:\WSAF\SERVICES</span>
                     </div>
                     <div class="flex gap-4 items-center">
-                        <span class="text-[10px] font-bold opacity-70">6 OBJECTS</span>
+                        <span class="text-[10px] font-bold opacity-70">8 OBJECTS</span>
                         <div class="flex gap-1">
                             <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
                             <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
@@ -380,18 +395,99 @@
                 </div>
                 
                 <div class="p-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    <div class="col-span-2 flex flex-col items-center group cursor-pointer">
-                        <div class="w-24 h-20 bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors">
-                            <div class="absolute -top-3 left-0 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="event_service">
+                        <div class="w-full bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors p-3">
+                            <div class="absolute -top-3 left-4 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="text-center">
+                                <span class="material-symbols-outlined text-3xl">event</span>
+                            </div>
                         </div>
-                        <span class="mt-3 text-[10px] md:text-xs font-bold text-center uppercase max-w-[120px] bg-black text-white px-1">Gói Chạy Sự Kiện Offline (A-Z)</span>
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] md:text-xs font-bold uppercase bg-black text-white px-1">GÓI TỔ CHỨC SỰ KIỆN TOÀN DIỆN</span>
+                            <p class="text-[8px] md:text-[10px] mt-1 max-w-[140px]">Hiện thực hóa ý tưởng của bạn thành trải nghiệm bùng nổ</p>
+                            <div class="flex flex-col gap-1 mt-2 items-center">
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-[#FFB703] border-2 border-black window-shadow w-full max-w-[140px] hover:bg-[#FFD166] transition-colors">NHẬN BÁO GIÁ NGAY</button>
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-white border-2 border-black w-full max-w-[140px] hover:bg-gray-100 transition-colors">Xem gói khác</button>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="col-span-2 flex flex-col items-center group cursor-pointer">
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="branding_exe">
+                        <div class="w-full bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors p-3">
+                            <div class="absolute -top-3 left-4 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="text-center">
+                                <span class="material-symbols-outlined text-3xl">brush</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] md:text-xs font-bold uppercase bg-black text-white px-1">GÓI XÂY DỰNG THƯƠNG HIỆU</span>
+                            <p class="text-[8px] md:text-[10px] mt-1 max-w-[140px]">Xây dựng bộ nhận diện thương hiệu hoàn chỉnh cho doanh nghiệp</p>
+                            <div class="flex flex-col gap-1 mt-2 items-center">
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-[#FFB703] border-2 border-black window-shadow w-full max-w-[140px] hover:bg-[#FFD166] transition-colors">NHẬN TƯ VẤN THƯƠNG HIỆU</button>
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-white border-2 border-black w-full max-w-[140px] hover:bg-gray-100 transition-colors">Xem dự án đã làm</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="digital_exe">
                         <div class="w-24 h-20 bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors">
                             <div class="absolute -top-3 left-0 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl font-bold">web</span>
+                            </div>
                         </div>
-                        <span class="mt-3 text-[10px] md:text-xs font-bold text-center uppercase max-w-[120px] bg-black text-white px-1">Gói Xây Dựng Nhận Diện (Branding)</span>
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] md:text-xs font-bold uppercase bg-black text-white px-1">GÓI PHÁT TRIỂN NỀN TẢNG SỐ</span>
+                            <p class="text-[8px] md:text-[10px] mt-1 max-w-[140px]">Xây dựng website và ứng dụng chuyên nghiệp cho thương hiệu của bạn</p>
+                            <div class="flex flex-col gap-1 mt-2 items-center">
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-[#FFB703] border-2 border-black window-shadow w-full max-w-[140px] hover:bg-[#FFD166] transition-colors">NHẬN BÁO GIÁ WEBSITE</button>
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-white border-2 border-black w-full max-w-[140px] hover:bg-gray-100 transition-colors">Xem portfolio</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="community_exe">
+                        <div class="w-24 h-20 bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors">
+                            <div class="absolute -top-3 left-0 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl font-bold">groups</span>
+                            </div>
+                        </div>
+                        <span class="mt-3 text-[10px] md:text-xs font-bold text-center uppercase max-w-[120px] bg-black text-white px-1">GÓI HỖ TRỢ CỘNG ĐỒNG</span>
+                    </div>
+
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="merch_exe">
+                        <div class="w-24 h-20 bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors">
+                            <div class="absolute -top-3 left-0 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl font-bold">shopping_bag</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] md:text-xs font-bold uppercase bg-black text-white px-1">GÓI ẤN PHẨM VÀ QUÀ TẶNG</span>
+                            <p class="text-[8px] md:text-[10px] mt-1 max-w-[140px]">Thiết kế và sản xuất merchandise chất lượng cao cho sự kiện và thương hiệu</p>
+                            <div class="flex flex-col gap-1 mt-2 items-center">
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-[#FFB703] border-2 border-black window-shadow w-full max-w-[140px] hover:bg-[#FFD166] transition-colors">NHẬN BÁO GIÁ MERCH</button>
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-white border-2 border-black w-full max-w-[140px] hover:bg-gray-100 transition-colors">Xem mau thiet ke</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 flex flex-col items-center group cursor-pointer" data-service="virtual_exe">
+                        <div class="w-24 h-20 bg-[#FFB703] border-4 border-black relative window-shadow group-hover:bg-[#FFD166] transition-colors">
+                            <div class="absolute -top-3 left-0 w-8 h-3 bg-[#FFB703] border-t-4 border-l-4 border-r-4 border-black"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl font-bold">videocam</span>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-center">
+                            <span class="text-[10px] md:text-xs font-bold uppercase bg-black text-white px-1">GÓI SỰ KIỆN TRỰC TUYẾN</span>
+                            <p class="text-[8px] md:text-[10px] mt-1 max-w-[140px]">Tổ chức sự kiện online chuyên nghiệp với công nghệ streaming hiện đại</p>
+                            <div class="flex flex-col gap-1 mt-2 items-center">
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-[#FFB703] border-2 border-black window-shadow w-full max-w-[140px] hover:bg-[#FFD166] transition-colors">NHAN TU VAN ONLINE EVENT</button>
+                                <button class="text-[8px] md:text-[10px] font-bold px-2 py-1.5 bg-white border-2 border-black w-full max-w-[140px] hover:bg-gray-100 transition-colors">Xem event da to chuc</button>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="flex flex-col items-center group cursor-pointer gap-2">
@@ -420,6 +516,288 @@
                             <span class="material-symbols-outlined text-3xl">support_agent</span>
                         </div>
                         <span class="text-[10px] font-bold uppercase font-label">Support</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
+                <div class="h-8 bg-secondary-container border-b-2 border-black flex items-center justify-between px-3">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-white">palette</span>
+                        <span class="text-xs font-bold font-headline uppercase tracking-tight text-white">CÁC DỊCH VỤ LẼ</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold opacity-70">ARTIST.EXE</span>
+                        <div class="flex gap-1">
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-surface-container-lowest">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold uppercase bg-black text-white px-2 py-1 inline-block mb-3 cursor-pointer" data-service="artist">ARTIST.EXE</h3>
+                        <p class="text-sm font-medium mb-2">Dịch vụ vẽ và thiết kế hình ảnh</p>
+                        <ul class="text-sm text-on-surface-variant space-y-1 ml-4">
+                            <li>Character / OC / Fanart</li>
+                            <li>Mascot / Chibi</li>
+                            <li>Illustration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                        <a href="https://x.com/MK24740" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">MK</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1d9bf0] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">X</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://x.com/LazyFox1910" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Kao</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1d9bf0] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">X</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://x.com/YuHa6666" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Yuha</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1d9bf0] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">X</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://x.com/RitsukiChrilip9" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase leading-tight">Chrilip<br>Ritsuki</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1d9bf0] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">X</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.pixiv.net/en/users/40597659" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Long</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#001d91] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">Pixiv</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/kiro344" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Kiro</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1877f2] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">FB</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/Mang0Steen" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Fluck</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1877f2] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">FB</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
+                <div class="h-8 bg-secondary-container border-b-2 border-black flex items-center justify-between px-3">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-white">palette</span>
+                        <span class="text-xs font-bold font-headline uppercase tracking-tight text-white">CÁC DỊCH VỤ LẼ</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold opacity-70">DESIGN.EXE</span>
+                        <div class="flex gap-1">
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-surface-container-lowest">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold uppercase bg-black text-white px-2 py-1 inline-block mb-3 cursor-pointer" data-service="design">DESIGN.EXE</h3>
+                        <p class="text-sm font-medium mb-2">Dịch vụ thiết kế đồ họa</p>
+                        <ul class="text-sm text-on-surface-variant space-y-1 ml-4">
+                            <li>Logo / Brand identity</li>
+                            <li>Banner / Poster / Social post</li>
+                            <li>Thiết kế lại Merch</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                        <a href="https://www.facebook.com/thieu1249" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">NTC</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1877f2] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">FB</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/itsmiyan" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Miyan</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1877f2] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">FB</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/tung.tranquoc.10" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <div class="w-full h-full bg-surface-dim flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-3xl text-on-surface-variant">person</span>
+                                </div>
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Blueink</span>
+                            <div class="mt-1 px-2 py-0.5 bg-[#1877f2] border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">FB</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
+                <div class="h-8 bg-primary-container border-b-2 border-black flex items-center justify-between px-3">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-white">code</span>
+                        <span class="text-xs font-bold font-headline uppercase tracking-tight text-white">DEV.EXE - DICH VU PHAT TRIEN UNG DUNG</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold opacity-70">DEV.EXE</span>
+                        <div class="flex gap-1">
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-surface-container-lowest">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold uppercase bg-black text-white px-2 py-1 inline-block mb-3 cursor-pointer" data-service="dev_exe">DEV.EXE</h3>
+                        <p class="text-sm font-medium mb-2">Dịch vụ phát triển ứng dụng</p>
+                        <ul class="text-sm text-on-surface-variant space-y-1 ml-4">
+                            <li>Landing Page</li>
+                            <li>Website bán hàng</li>
+                            <li>Web App</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                        <a href="https://miho.worldsimp.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group cursor-pointer">
+                            <div class="w-16 h-16 bg-tertiary-container border-4 border-black window-shadow group-hover:scale-110 transition-transform overflow-hidden">
+                                <img class="w-full h-full object-cover" src="https://miho.worldsimp.com/assets/images/miho-no-bg.webp" alt="Miho avatar">
+                            </div>
+                            <span class="mt-2 text-xs font-bold text-center uppercase">Miho</span>
+                            <div class="mt-1 px-2 py-0.5 bg-tertiary border-2 border-black window-shadow">
+                                <span class="text-[8px] font-bold text-white uppercase">Dev</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
+                <div class="h-8 bg-primary-container border-b-2 border-black flex items-center justify-between px-3">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">group</span>
+                        <span class="text-xs font-bold font-headline uppercase tracking-tight">C:\WSAF\TEAM_MEMBERS</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold opacity-70">TEMPLATE</span>
+                        <div class="flex gap-1">
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex flex-col items-center gap-2 inline-block">
+                        <div class="w-16 h-16 border-2 border-black window-shadow bg-surface-dim flex items-center justify-center overflow-hidden">
+                            <img class="w-full h-full object-cover" src="AVATAR_URL" alt="MEMBER_NAME avatar">
+                        </div>
+                        <span class="text-xs font-bold uppercase text-center">MEMBER_NAME</span>
+                        <a href="PROFILE_URL" target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold px-2 py-1 bg-tertiary-container border-2 border-black window-shadow flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">link</span>
+                            Profile
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-12 bg-surface border-4 border-black window-shadow">
+                <div class="h-8 bg-primary-container border-b-2 border-black flex items-center justify-between px-3">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-white">celebration</span>
+                        <span class="text-xs font-bold font-headline uppercase tracking-tight text-white">EVENT.EXE - TO CHUC SU KIEN</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <span class="text-[10px] font-bold opacity-70">EVENT.EXE</span>
+                        <div class="flex gap-1">
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-surface-dim"></div>
+                            <div class="w-4 h-4 border-2 border-black bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 bg-surface-container-lowest">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold uppercase bg-black text-white px-2 py-1 inline-block mb-3 cursor-pointer" data-service="event_service">EVENT.EXE</h3>
+                        <p class="text-sm font-medium mb-2">Tổ chức sự kiện</p>
+                        <ul class="text-sm text-on-surface-variant space-y-1 ml-4">
+                            <li>Setup event</li>
+                            <li>Kịch bản / Vận hành</li>
+                            <li>Điều phối Vendor</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -539,8 +917,8 @@
                         ></textarea>
                     </div>
                     
-                    <button type="submit" class="w-full py-3 bg-secondary-container text-white border-2 border-black font-bold uppercase tracking-widest window-shadow hover:bg-secondary btn-press flex items-center justify-center gap-2">
-                        <span>Enter/Send Ticket</span>
+                    <button type="submit" class="w-full py-3 bg-[#FFB703] text-black border-2 border-black font-bold uppercase tracking-widest window-shadow hover:bg-[#FFD166] btn-press flex items-center justify-center gap-2 min-h-[44px]">
+                        <span>NHẬN BÁO GIÁ NGAY</span>
                         <span class="material-symbols-outlined">send</span>
                     </button>
                 </form>
@@ -696,6 +1074,148 @@
                 headerClass: '',
                 content: '<div class="p-4"><h3 class="font-bold mb-2">Complete Branding Solution</h3><ul class="list-disc pl-4 space-y-1"><li>Logo design</li><li>Brand guidelines</li><li>Marketing collateral</li><li>Social media kit</li><li>Brand strategy</li></ul><p class="mt-4 font-bold">Contact us for pricing!</p></div>'
             },
+            branding_exe: {
+                title: 'GOI XAY DUNG THUONG HIEU',
+                icon: 'brush',
+                headerClass: '',
+                content: '<div class="p-4 space-y-4"><p class="text-sm font-semibold">Xay dung bo nhan dien thuong hieu hoan chinh cho doanh nghiep</p><div><h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4><ul class="list-disc pl-4 space-y-1 text-sm"><li>Thiet ke Logo va Banner</li><li>Brand Guidelines chuyen nghiep</li><li>Bo hinh anh truyen thong</li><li>Chien luoc truyen thong thuong hieu</li></ul></div><div class="pt-2 border-t-2 border-black"><p class="text-sm"><span class="font-bold">Doi tuong:</span> Thuong hieu can bo nhan dien dong bo</p></div></div>'
+            },
+            community_exe: {
+                title: 'GOI HO TRO CONG DONG',
+                icon: 'groups',
+                headerClass: 'bg-[#FFB703] border-b-4 border-black',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Dong hanh cung cong dong sang tao voi cac dich vu ho tro toan dien</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Tu van chien luoc xay dung cong dong</li>
+                            <li>Ho tro quan ly nhom va fanpage</li>
+                            <li>Thiet ke noi dung dinh ky</li>
+                            <li>To chuc mini event va giveaway</li>
+                            <li>Dao tao team van hanh</li>
+                            <li>Phan tich va bao cao tang truong</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Cong dong fan, nhom sang tao, fanpage moi thanh lap</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-[#FFB703] border-2 border-black font-bold text-sm hover:bg-[#FFD166] transition-colors">NHAN TU VAN CONG DONG</button>
+                        <button onclick="closeModal()" class="px-4 py-2 bg-white border-2 border-black font-bold text-sm hover:bg-gray-100 transition-colors">Xem case study</button>
+                    </div>
+                </div>`
+            },
+            event_service: {
+                title: 'GÓI TỔ CHỨC SỰ KIỆN TOÀN DIỆN',
+                icon: 'event',
+                headerClass: 'bg-[#FFB703] border-b-4 border-black',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Hiện thực hóa ý tưởng của bạn thành trải nghiệm bùng nổ</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiết dịch vụ:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Lên ý tưởng và concept cho sự kiện</li>
+                            <li>Hỗ trợ tìm vị trí tổ chức phù hợp</li>
+                            <li>Kết nối với đối tác uy tín</li>
+                            <li>Điều phối và quản lý sự kiện</li>
+                            <li>Cung cấp hệ thống bán vé online</li>
+                            <li>Thiết kế hình ảnh và nhân vật sự kiện</li>
+                            <li>Hỗ trợ in ấn sản phẩm truyền thông</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Đối tượng phù hợp:</h4>
+                        <p class="text-sm">Offline fan meeting, sự kiện cộng đồng, watch party</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-[#FFB703] border-2 border-black font-bold text-sm hover:bg-[#FFD166] transition-colors">NHẬN BÁO GIÁ NGAY</button>
+                        <button onclick="closeModal()" class="px-4 py-2 bg-white border-2 border-black font-bold text-sm hover:bg-gray-100 transition-colors">Xem gói khác</button>
+                    </div>
+                </div>`
+            },
+            digital_exe: {
+                title: 'GOI PHAT TRIEN NEN TANG SO',
+                icon: 'web',
+                headerClass: '',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Xay dung website va ung dung chuyen nghiep cho thuong hieu cua ban</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Thiet ke va phat trien website</li>
+                            <li>Landing page chuyen doi cao</li>
+                            <li>He thong quan ly noi dung (CMS)</li>
+                            <li>Tich hop thanh toan online</li>
+                            <li>Toi uu SEO va hieu suat</li>
+                            <li>Bao tri va ho tro ky thuat</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong phu hop:</h4>
+                        <p class="text-sm">Doanh nghiep can website chuyen nghiep, startup</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-[#FFB703] border-2 border-black font-bold text-sm hover:bg-[#FFD166] transition-colors">NHAN BAO GIA WEBSITE</button>
+                        <button onclick="closeModal()" class="px-4 py-2 bg-white border-2 border-black font-bold text-sm hover:bg-gray-100 transition-colors">Xem portfolio</button>
+                    </div>
+                </div>`
+            },
+            merch_exe: {
+                title: 'GOI AN PHAM VA QUA TANG',
+                icon: 'shopping_bag',
+                headerClass: 'bg-[#FFB703] border-b-4 border-black',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Thiet ke va san xuat merchandise chat luong cao cho su kien va thuong hieu</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Thiet ke standee va backdrop</li>
+                            <li>In an banner va poster</li>
+                            <li>San xuat merchandise (ao thun, moc khoa, v.v.)</li>
+                            <li>Thiet ke bao bi san pham</li>
+                            <li>Qua tang su kien cao cap</li>
+                            <li>Quan ly san xuat va chat luong</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Su kien can an pham, thuong hieu can merchandise</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-[#FFB703] border-2 border-black font-bold text-sm hover:bg-[#FFD166] transition-colors">NHAN BAO GIA MERCH</button>
+                        <button onclick="closeModal()" class="px-4 py-2 bg-white border-2 border-black font-bold text-sm hover:bg-gray-100 transition-colors">Xem mau thiet ke</button>
+                    </div>
+                </div>`
+            },
+            virtual_exe: {
+                title: 'GOI SU KIEN TRUC TUYEN',
+                icon: 'videocam',
+                headerClass: 'bg-[#FFB703] border-b-4 border-black',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">To chuc su kien online chuyen nghiep voi cong nghe streaming hiện đại</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Thiet lap nen tang streaming (YouTube, Twitch, Zoom)</li>
+                            <li>Thiet ke overlay va graphic cho stream</li>
+                            <li>Quan ly ky thuat va ho tro live</li>
+                            <li>Tuong tac khan gia real-time</li>
+                            <li>Ghi hinh va chinh sua post-event</li>
+                            <li>Bao cao phan tich sau su kien</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Webinar, livestream ban hang, talk show online, gaming event</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <button onclick="closeModal()" class="px-4 py-2 bg-[#FFB703] border-2 border-black font-bold text-sm hover:bg-[#FFD166] transition-colors">NHAN TU VAN ONLINE EVENT</button>
+                        <button onclick="closeModal()" class="px-4 py-2 bg-white border-2 border-black font-bold text-sm hover:bg-gray-100 transition-colors">Xem event da to chuc</button>
+                    </div>
+                </div>`
+            },
             artist: {
                 title: 'Artist Services',
                 icon: 'brush',
@@ -719,6 +1239,90 @@
                 icon: 'support_agent',
                 headerClass: '',
                 content: '<div class="p-4"><h3 class="font-bold mb-2">Customer Support</h3><p>24/7 support for all WSAF services.</p><p class="mt-2">Email: support@wsaf.com</p><p>Hotline: 1900-WSAF</p></div>'
+            },
+            artist_exe: {
+                title: 'GOI DICH VU ARTIST',
+                icon: 'palette',
+                headerClass: '',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Dich vu ve hinh anh va noi dung truc quan cho thuong hieu</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Thiet ke illustration va vector</li>
+                            <li>Linh vuc truyen thong (poster, banner, social media)</li>
+                            <li>Character design va mascot</li>
+                            <li>Concept art cho san pham</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Thuong hieu can hinh anh rieng biet, doi tuong muon tu cach nhan vat</p>
+                    </div>
+                </div>`
+            },
+            design_exe: {
+                title: 'GOI DICH VU DESIGN',
+                icon: 'design_services',
+                headerClass: '',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Thiet ke dong nhat va sang tao cho thuong hieu</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Thiet ke Logo va Brand Identity</li>
+                            <li>Giao dien nguoi dung (UI/UX)</li>
+                            <li>Marketing collateral va in an</li>
+                            <li>Thiet ke trang web va app</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Doanh nghiep, startup, ca nhan can thiet ke chuyen nghiep</p>
+                    </div>
+                </div>`
+            },
+            dev_exe: {
+                title: 'GOI DICH VU DEV',
+                icon: 'computer',
+                headerClass: '',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">Phat trien ung dung va website chuyen nghiep</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Website va ung dung web</li>
+                            <li>Ung dung di dong (iOS, Android)</li>
+                            <li>Tich hop API va he thong</li>
+                            <li>Bao tri va nang cap he thong</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Doanh nghiep can website va ung dung, startup tech</p>
+                    </div>
+                </div>`
+            },
+            event_exe: {
+                title: 'GOI DICH VU EVENT',
+                icon: 'celebration',
+                headerClass: '',
+                content: `<div class="p-4 space-y-4">
+                    <p class="text-sm font-semibold">To chuc su kien chuyen nghiep va hieu qua</p>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Chi tiet dich vu:</h4>
+                        <ul class="list-disc pl-4 space-y-1 text-sm">
+                            <li>Lap ke hoach va concept su kien</li>
+                            <li>Dia diem va ket noi doi tac</li>
+                            <li>Dieu phoi va quan ly su kien</li>
+                            <li>Hinh anh va truyen thong su kien</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-2">Doi tuong:</h4>
+                        <p class="text-sm">Cong ty, to chuc, ca nhan can to chuc su kien</p>
+                    </div>
+                </div>`
             }
         };
         
@@ -778,12 +1382,10 @@
             icon.addEventListener('click', () => openModal(types[index]));
         });
         
-        // Service items click handlers
-        const serviceTypes = ['event_package', 'branding_package', 'artist', 'design', 'assets3d', 'support'];
-        document.querySelectorAll('section:nth-of-type(3) .cursor-pointer').forEach((item, index) => {
-            if (serviceTypes[index]) {
-                item.addEventListener('click', () => openModal(serviceTypes[index]));
-            }
+        // Service items click handlers using data-service attributes
+        document.querySelectorAll('[data-service]').forEach((item) => {
+            const serviceType = item.getAttribute('data-service');
+            item.addEventListener('click', () => openModal(serviceType));
         });
         
         // Hero CTA buttons
