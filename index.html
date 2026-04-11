@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>WS&F — World Simp & Friends | Community Events</title>
-    <meta name="description" content="World Simp & Friends — Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam. Kết nối, chia sẻ đam mê và tạo nên những kỷ niệm đáng nhớ.">
-    <meta name="keywords" content="World Simp Friends, WS&F, Hololive Vietnam, VTuber event, community event, fandom">
+    <!-- SEO & GEO (Generative Engine Optimization) -->
+    <title>WS&F — World Simp & Friends | Premier VTuber & Hololive Community Events</title>
+    <meta name="description" content="World Simp & Friends (WS&F) — A pioneering community organizing Hololive, VTuber, Anime, and pop culture offline events. Connecting fans, sharing passions, and creating unforgettable experiences.">
+    <meta name="keywords" content="World Simp Friends, WS&F, Hololive community, VTuber offline, VTuber events, fandom conventions, anime gatherings, pop culture event, Hololive fans">
     <meta name="author" content="World Simp & Friends">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://worldsimp.com/">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Meta Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://worldsimp.com/">
-    <meta property="og:title" content="WS&F — World Simp & Friends">
-    <meta property="og:description" content="Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam.">
-    <meta property="og:image" content="/assets/imgs/logo.webp">
+    <meta property="og:title" content="WS&F — World Simp & Friends | Premier VTuber Offline Events">
+    <meta property="og:description" content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
+    <!-- MUST be Absolute URL for correct OG Scraping -->
+    <meta property="og:image" content="https://worldsimp.com/assets/imgs/logo.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://worldsimp.com/">
     <meta name="twitter:title" content="WS&F — World Simp & Friends">
-    <meta name="twitter:description" content="Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam.">
+    <meta name="twitter:description" content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
+    <meta name="twitter:image" content="https://worldsimp.com/assets/imgs/logo.webp">
+
+    <!-- Resource Hints & Preconnects for Web Vitals Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
@@ -32,11 +43,36 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/imgs/favicon/site.webmanifest">
+
+    <!-- JSON-LD Schema (E-E-A-T & Google Knowledge Graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "World Simp & Friends",
+      "alternateName": "WS&F",
+      "url": "https://worldsimp.com",
+      "logo": "https://worldsimp.com/assets/imgs/logo.webp",
+      "description": "Organizing premier Hololive, VTuber, and Anime community events.",
+      "sameAs": [
+        "https://www.facebook.com/worldsimp.and.friends",
+        "https://discord.gg/your-discord-link"
+      ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Global Loading Screen -->
+    <div id="global-loader" class="global-loader">
+        <div class="global-loader__logo-wrapper">
+            <img src="/assets/imgs/logo.webp" alt="Loading Logo" class="global-loader__logo">
+            <div class="global-loader__text">LOADING...</div>
+        </div>
+    </div>
+
     <div class="app initial-loading">
         <header class="header" role="banner">
-            <a data-route="home" href="/home" class="header__title" aria-label="WS&F — Trang chủ">
+            <a data-route="home" href="/home" class="header__title" aria-label="WS&F — Home">
                 <div class="logo">
                     <img src="/assets/imgs/logo.webp" alt="WS&F Logo" width="50" height="50">
                 </div>
@@ -44,7 +80,7 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="header__nav" aria-label="Navigation chính">
+            <nav class="header__nav" aria-label="Main navigation">
                 <ul>
                     <li>
                         <a href="/home" data-route="home">About</a>
@@ -62,7 +98,7 @@
             </nav>
 
             <!-- Hamburger (mobile only) -->
-            <button class="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-nav">
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
                 <span class="hamburger__bar"></span>
@@ -86,7 +122,7 @@
                 <a href="/home#network" data-route="home">Network</a>
                 <a href="/home#partner" data-route="home">Partner</a>
             </nav>
-            <p class="copy">© 2025 WS&F — World Simp &amp; Friends.</p>
+            <p class="copy">© 2025 WS&F — World Simp &amp;&nbsp;Friends.</p>
         </footer>
     </div>
 

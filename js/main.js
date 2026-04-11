@@ -200,6 +200,11 @@ class Router {
         this.contentDiv.innerHTML = '<div class="error-message"><h2>404 — Page Not Found</h2></div>';
         if (this.isInitialLoad) {
             this.app.classList.add('loaded');
+            const globalLoader = document.getElementById('global-loader');
+            if(globalLoader) {
+                globalLoader.classList.add('hidden');
+                setTimeout(() => globalLoader.remove(), 800);
+            }
             this.isInitialLoad = false;
         }
     }
@@ -254,8 +259,13 @@ class Router {
             if (this.isInitialLoad) {
                 setTimeout(() => {
                     this.app.classList.add('loaded');
+                    const globalLoader = document.getElementById('global-loader');
+                    if(globalLoader) {
+                        globalLoader.classList.add('hidden');
+                        setTimeout(() => globalLoader.remove(), 800); // Remove from DOM after fade out transition
+                    }
                     this.isInitialLoad = false;
-                }, 50);
+                }, 400); // 400ms buffer to ensure assets are rendered and pulse plays
             }
         } catch (error) {
             this.showNotFound();

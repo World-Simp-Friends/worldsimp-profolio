@@ -3,7 +3,7 @@ const projects = [
         name: 'WELCOME OLLIE AND SHIORI',
         type: 'COMMUNITY',
         category: 'HOLOLIVE',
-        date: '',
+        date: '5/4/2026',
         img: 'assets/imgs/ollie-and-shiori.webp',
         link: 'https://x.com/oriconproject/status/2040309021341815050'
     },
@@ -12,7 +12,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '8/3/2026',
-        img: 'assets/imgs/drivin-into-dream.png',
+        img: 'assets/imgs/drivin-into-dream.webp',
         link: 'https://www.facebook.com/media/set/?set=a.122270646638240990&type=3&locale=vi_VN'
     },
     {
@@ -20,7 +20,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'BANDORI',
         date: 'HN-T2/2026',
-        img: 'assets/imgs/bangdream.png',
+        img: 'assets/imgs/bangdream.webp',
         link: 'https://www.facebook.com/share/p/1CgjSDxNHC/'
     },
     {
@@ -28,7 +28,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '26/10/2025',
-        img: 'assets/imgs/fantasia.png',
+        img: 'assets/imgs/fantasia.webp',
         link: 'https://drive.google.com/drive/folders/14N3IJjL7Hx2ld_O2p4v-Uepr8ZDKMFVc?usp=drive_link'
     },
     {
@@ -44,7 +44,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '18-20/07/2025',
-        img: 'assets/imgs/stellar-driff-2025.png',
+        img: 'assets/imgs/stellar-driff-2025.webp',
         link: 'https://www.facebook.com/share/p/1AnfM8vW6y/'
     },
     {
@@ -52,7 +52,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '29/12/2024',
-        img: 'assets/imgs/offline-reunion-2024.png',
+        img: 'assets/imgs/offline-reunion-2024.webp',
         link: 'https://www.facebook.com/media/set/?set=a.122191460072240990&type=3&locale=vi_VN'
     },
     {
@@ -60,7 +60,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '2/11/2024',
-        img: 'assets/imgs/hobby-horizion-2024.png',
+        img: 'assets/imgs/hobby-horizion-2024.webp',
         link: 'https://www.facebook.com/media/set/?set=a.122155490024240990&type=3&locale=vi_VN'
     },
     {
@@ -68,7 +68,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '15/9/2024',
-        img: 'assets/imgs/biggest-hcm-offline-2024.png',
+        img: 'assets/imgs/biggest-hcm-offline-2024.webp',
         link: 'https://www.facebook.com/media/set/?set=a.122171821736240990&type=3&locale=vi_VN'
     },
     {
@@ -76,7 +76,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '14/7/2024',
-        img: 'assets/imgs/danang-2024.png',
+        img: 'assets/imgs/danang-2024.webp',
         link: 'https://www.facebook.com/share/p/18PW4L9D6R/'
     },
     {
@@ -84,7 +84,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: '24/12/2023',
-        img: 'assets/imgs/first-hanoi-offline.jpg',
+        img: 'assets/imgs/first-hanoi-offline.webp',
         link: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL'
     },
 ];
@@ -93,7 +93,7 @@ export default async function home() {
 
     return `
         <section class="about" id="about">
-            <h2 class="title">WORLD SIMP &amp; FRIENDS</h2>
+            <h1 class="title">WORLD SIMP &amp;&nbsp;FRIENDS</h1>
             <p class="desc">ABOUT</p>
             <div class="about__wrapper">
                 <div class="about__item">
@@ -111,7 +111,7 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.png" alt="WS&F team illustration">
+                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
@@ -126,7 +126,7 @@ export default async function home() {
             <p class="desc">Who We Are</p>
             <div class="about-detail__content">
                 <p class="about-detail__text">
-                    World Simp and Friends is a community event organizing team, focused on fandom culture, entertainment, and creative experiences.
+                    World Simp and&nbsp;Friends is a community event organizing team, focused on fandom culture, entertainment, and creative experiences.
                 </p>
                 <p class="about-detail__text">
                     We build spaces where people can connect, share their passions, and enjoy unforgettable moments together.
@@ -143,16 +143,21 @@ export default async function home() {
             <div class="projects__grid">
                 ${projects.map(project => `
                     <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project__card fade-in-up">
-                        <div class="project__card__badges">
-                            <span class="project__type">${project.type}</span>
-                            <span class="project__category">${project.category}</span>
-                        </div>
-                        <div class="project__card__image">
+                        <div class="project__card__image-wrapper">
                             <img src="${project.img}" alt="${project.name}" class="project__img" loading="lazy">
+                            <div class="project__card__overlay">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="project__card__icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </div>
                         </div>
-                        <div class="project__card__info">
-                            <h3 class="project__name">${project.name}</h3>
-                            ${project.date ? `<span class="project__date">${project.date}</span>` : ''}
+                        <div class="project__card__content">
+                            <div class="project__card__badges">
+                                <span class="project__type">${project.type}</span>
+                                <span class="project__category">${project.category}</span>
+                            </div>
+                            <div class="project__card__info">
+                                <h3 class="project__name">${project.name}</h3>
+                                ${project.date ? `<span class="project__date"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right:6px;vertical-align:-3px"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>${project.date}</span>` : ''}
+                            </div>
                         </div>
                     </a>
                 `).join('')}
@@ -165,7 +170,7 @@ export default async function home() {
             <div class="network__grid">
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/oricon.jpg" alt="Oricon Project" loading="lazy">
+                        <img src="assets/imgs/oricon.webp" alt="Oricon Project" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">ORICON PROJECT</h3>
@@ -182,10 +187,10 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldlotho.jpg" alt="World Lốt Hố" loading="lazy">
+                        <img src="assets/imgs/worldlotho.webp" alt="World Lotho" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">WORLD LỐT HỐ</h3>
+                        <h3 class="network__card__name">WORLD LOTHO</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/worldlotho" target="_blank" rel="noopener noreferrer" class="network__social" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -205,10 +210,10 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/wlhvanhungnguoiban.png" alt="World Lốt Hố Và Những Người Bạn" loading="lazy">
+                        <img src="assets/imgs/wlhvanhungnguoiban.webp" alt="World Lotho And Friends" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">WORLD LỐT HỐ VÀ NHỮNG NGƯỜI BẠN</h3>
+                        <h3 class="network__card__name">WORLD LOTHO &amp; FRIENDS</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/worldlotho2305" target="_blank" rel="noopener noreferrer" class="network__social" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -219,10 +224,10 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldsimp.png" alt="World Simp and Friends" loading="lazy">
+                        <img src="assets/imgs/worldsimp.webp" alt="World Simp and Friends" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">WORLD SIMP AND FRIENDS</h3>
+                        <h3 class="network__card__name">WORLD SIMP AND&nbsp;FRIENDS</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/worldsimp235" target="_blank" rel="noopener noreferrer" class="network__social" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -233,10 +238,10 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/logo-odctsh.png" alt="Ở Đây Chúng Tôi Simp Hololive" loading="lazy">
+                        <img src="assets/imgs/logo-odctsh.webp" alt="We Simp Hololive Here" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">Ở ĐÂY CHÚNG TÔI SIMP HOLOLIVE</h3>
+                        <h3 class="network__card__name">WE SIMP HOLOLIVE HERE</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/groups/odaychungtoisimpholo" target="_blank" rel="noopener noreferrer" class="network__social network__social--group" aria-label="Facebook Group">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -250,10 +255,10 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/thegioivtuber.png" alt="Thế Giới Vtuber" loading="lazy">
+                        <img src="assets/imgs/thegioivtuber.webp" alt="VTuber World" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">THẾ GIỚI VTUBER</h3>
+                        <h3 class="network__card__name">VTUBER WORLD</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/groups/thegioivtuber" target="_blank" rel="noopener noreferrer" class="network__social network__social--group" aria-label="Facebook Group">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -270,7 +275,7 @@ export default async function home() {
             <div class="partner__grid">
                 <a href="https://www.facebook.com/HobbyHorizonVN" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/hobbyhorizon.png" alt="Hobby Horizon" loading="lazy">
+                        <img src="assets/imgs/hobbyhorizon.webp" alt="Hobby Horizon" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">HOBBY HORIZON</h3>
@@ -279,7 +284,7 @@ export default async function home() {
 
                 <a href="https://www.facebook.com/PeoPoStore" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/peopostore.png" alt="PeoPo Store" loading="lazy">
+                        <img src="assets/imgs/peopostore.webp" alt="PeoPo Store" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">PEOPO STORE</h3>
@@ -288,7 +293,7 @@ export default async function home() {
 
                 <a href="https://www.facebook.com/stellarsteps.event" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/stellarstep.png" alt="Stellar Steps" loading="lazy">
+                        <img src="assets/imgs/stellarstep.webp" alt="Stellar Steps" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">STELLAR STEPS</h3>
@@ -302,24 +307,30 @@ export default async function home() {
             <p class="desc">
                 If you are interested, please contact us via email or facebook below
             </p>
-            <div class="contact__wrapper">
-                <span class="contact__social">Email</span>
-                <div class="contact__wrapper__email">
-                    <a href="mailto:admin@worldsimp.com" class="contact__mail">
-                        admin@worldsimp.com
-                    </a>
-                    <svg class="copy__email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="button" tabindex="0" aria-label="Copy email address" data-copy-target=".contact__mail">
-                        <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
-                    </svg>
-                </div> 
-            </div>
-            <div class="contact__wrapper">
-                <span class="contact__social">Facebook</span>
-                <div class="contact__wrapper__social">
-                    <a href="https://www.facebook.com/worldsimp235" target="_blank" rel="noopener noreferrer" class="contact__icon" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
+            <div class="contact__cards">
+                <!-- Email Card -->
+                <div class="contact__card fade-in-up" role="button" tabindex="0" aria-label="Copy email address" data-copy-target=".contact__mail__text">
+                    <div class="contact__card__icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z"/></svg>
+                    </div>
+                    <div class="contact__card__content">
+                        <span class="contact__card__title">DROP AN EMAIL</span>
+                        <span class="contact__mail__text">admin@worldsimp.com</span>
+                        <span class="contact__card__hint">Click to copy address</span>
+                    </div>
                 </div>
+
+                <!-- Facebook Card -->
+                <a href="https://www.facebook.com/worldsimp235" target="_blank" rel="noopener noreferrer" class="contact__card fade-in-up">
+                    <div class="contact__card__icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <div class="contact__card__content">
+                        <span class="contact__card__title">FOLLOW ON FACEBOOK</span>
+                        <span class="contact__card__desc">World Simp & Friends</span>
+                        <span class="contact__card__hint">Join our community</span>
+                    </div>
+                </a>
             </div>
         </section>
     `;

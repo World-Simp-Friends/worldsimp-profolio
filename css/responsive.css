@@ -55,14 +55,13 @@
         font-size: 2.8rem;
     }
 
-    .contact__mail,
-    .contact__discord {
-        font-size: 4rem;
+    .contact__mail__text,
+    .contact__card__desc {
+        font-size: 3.4rem;
     }
 
-    .contact__social {
-        font-size: 3.2rem;
-        padding: 10px 66px;
+    .contact__card__title {
+        font-size: 2.4rem;
     }
 
     .work__class,
@@ -224,16 +223,17 @@
         padding: 6px 16px 4px;
     }
 
-    .network__grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 12px;
-        grid-row-gap: 12px;
+    .network__grid,
+    .partner__grid {
+        gap: 16px;
     }
 
-    .partner__grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 12px;
-        grid-row-gap: 12px;
+    .network__card {
+        width: calc(50% - 16px);
+    }
+
+    .partner__card {
+        width: calc(33.333% - 16px);
     }
 }
 
@@ -332,7 +332,7 @@
     }
 
     .about-detail__text {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
     }
 
     .about-detail__gallery {
@@ -465,8 +465,9 @@
         margin-left: 0px;
     }
 
-    .contact__wrapper {
-        margin-top: 40px;
+    .contact__card {
+        min-width: 100%;
+        margin-top: 20px;
     }
 
     .page__review {
@@ -584,7 +585,11 @@
 
     .network__grid {
         margin-top: 25px;
-        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .network__card {
+        width: 100%;
     }
 
     .content .network .title {
@@ -648,7 +653,11 @@
 
     .partner__grid {
         margin-top: 25px;
-        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .partner__card {
+        width: 100%;
     }
 
     .content .partner .title {
@@ -690,8 +699,8 @@
 
 @media (max-width: 32.5rem) {
 
-    .contact__mail,
-    .contact__discord {
-        font-size: 2.4rem;
+    .contact__mail__text,
+    .contact__card__desc {
+        font-size: 1.8rem;
     }
 }
