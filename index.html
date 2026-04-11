@@ -1,26 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>WS&F — World Simp & Friends | Community Events</title>
+    <meta name="description" content="World Simp & Friends — Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam. Kết nối, chia sẻ đam mê và tạo nên những kỷ niệm đáng nhớ.">
+    <meta name="keywords" content="World Simp Friends, WS&F, Hololive Vietnam, VTuber event, community event, fandom">
+    <meta name="author" content="World Simp & Friends">
+    <link rel="canonical" href="https://worldsimp.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worldsimp.com/">
+    <meta property="og:title" content="WS&F — World Simp & Friends">
+    <meta property="og:description" content="Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam.">
+    <meta property="og:image" content="/assets/imgs/logo.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WS&F — World Simp & Friends">
+    <meta name="twitter:description" content="Tổ chức sự kiện cộng đồng fandom Hololive, VTuber tại Việt Nam.">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/imgs/favicon/site.webmanifest">
-    <title>WS&F</title>
 </head>
 <body>
     <div class="app initial-loading">
-        <header class="header">
-            <a data-route="home" href="/home" class="header__title">
+        <header class="header" role="banner">
+            <a data-route="home" href="/home" class="header__title" aria-label="WS&F — Trang chủ">
                 <div class="logo">
-                    <img src="/assets/imgs/logo.webp" alt="">
+                    <img src="/assets/imgs/logo.webp" alt="WS&F Logo" width="50" height="50">
                 </div>
-                <p>WS&F</p>
+                <p aria-hidden="true">WS&F</p>
             </a>
-            <div class="header__nav">
+
+            <!-- Desktop Nav -->
+            <nav class="header__nav" aria-label="Navigation chính">
                 <ul>
                     <li>
                         <a href="/home" data-route="home">About</a>
@@ -35,13 +59,34 @@
                         <a href="/home#partner" data-route="home">Partner</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
+
+            <!-- Hamburger (mobile only) -->
+            <button class="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-nav">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </button>
         </header>
 
-        <div class="content"></div>
+        <!-- Mobile Nav Overlay -->
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+            <a href="/home" data-route="home">About</a>
+            <a href="/projects" data-route="projects">Projects</a>
+            <a href="/home#network" data-route="home">Network</a>
+            <a href="/home#partner" data-route="home">Partner</a>
+        </nav>
 
-        <footer class="footer">
-            <p class="copy">© WS&F.</p>
+        <main class="content" id="main-content"></main>
+
+        <footer class="footer" role="contentinfo">
+            <nav class="footer__links" aria-label="Footer navigation">
+                <a href="/home" data-route="home">About</a>
+                <a href="/projects" data-route="projects">Projects</a>
+                <a href="/home#network" data-route="home">Network</a>
+                <a href="/home#partner" data-route="home">Partner</a>
+            </nav>
+            <p class="copy">© 2025 WS&F — World Simp &amp; Friends.</p>
         </footer>
     </div>
 

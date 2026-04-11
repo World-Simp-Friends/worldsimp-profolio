@@ -1,100 +1,100 @@
 const projects = [
-  {
-    name: 'WELCOME OLLIE AND SHIORI',
-    type: 'COMMUNITY',
-    category: 'HOLOLIVE',
-    date: '',
-    img: 'assets/imgs/ollie-and-shiori.webp',
-    link: 'https://x.com/oriconproject/status/2040309021341815050'
-  },
-  {
-    name: "DRIVIN' INTO DREAMS",
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '8/3/2026',
-    img: 'assets/imgs/drivin-into-dream.png',
-    link: 'https://www.facebook.com/media/set/?set=a.122270646638240990&type=3&locale=vi_VN'
-  },
-  {
-    name: 'BanG Dream! & Chill',
-    type: 'OFFLINE',
-    category: 'BANDORI',
-    date: 'HN-T2/2026',
-    img: 'assets/imgs/bangdream.png',
-    link: 'https://www.facebook.com/share/p/1CgjSDxNHC/'
-  },
-  {
-    name: 'FANTASIA - COSPLAY FESTIVAL',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '26/10/2025',
-    img: 'assets/imgs/fantasia.png',
-    link: 'https://drive.google.com/drive/folders/14N3IJjL7Hx2ld_O2p4v-Uepr8ZDKMFVc?usp=drive_link'
-  },
-  {
-    name: 'TOGETHER, WE SIMP',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '05/10/2025',
-    img: 'assets/imgs/together-wesimp.JPG',
-    link: 'https://drive.google.com/drive/folders/1aZpmqqve2Lh8cbRFm1iKFSSEUegZ01tX'
-  },
-  {
-    name: 'STELLAR DRIFT 2025',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '18-20/07/2025',
-    img: 'assets/imgs/stellar-driff-2025.png',
-    link: 'https://www.facebook.com/share/p/1AnfM8vW6y/'
-  },
-  {
-    name: 'HOLOLIVE REUNION 2024',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '29/12/2024',
-    img: 'assets/imgs/offline-reunion-2024.png',
-    link: 'https://www.facebook.com/media/set/?set=a.122191460072240990&type=3&locale=vi_VN'
-  },
-  {
-    name: 'HOBBY HORIZON 2024',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '2/11/2024',
-    img: 'assets/imgs/hobby-horizion-2024.png',
-    link: 'https://www.facebook.com/media/set/?set=a.122155490024240990&type=3&locale=vi_VN'
-  },
-  {
-    name: 'BIGGEST HCM OFFLINE 2024',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '15/9/2024',
-    img: 'assets/imgs/biggest-hcm-offline-2024.png',
-    link: 'https://www.facebook.com/media/set/?set=a.122171821736240990&type=3&locale=vi_VN'
-  },
-  {
-    name: 'DA NANG OFFLINE 2024',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '14/7/2024',
-    img: 'assets/imgs/danang-2024.png',
-    link: 'https://www.facebook.com/share/p/18PW4L9D6R/'
-  },
-  {
-    name: 'FIRST HANOI OFFLINE',
-    type: 'OFFLINE',
-    category: 'HOLOLIVE',
-    date: '24/12/2023',
-    img: 'assets/imgs/first-hanoi-offline.jpg',
-    link: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL'
-  },
+    {
+        name: 'WELCOME OLLIE AND SHIORI',
+        type: 'COMMUNITY',
+        category: 'HOLOLIVE',
+        date: '',
+        img: 'assets/imgs/ollie-and-shiori.webp',
+        link: 'https://x.com/oriconproject/status/2040309021341815050'
+    },
+    {
+        name: "DRIVIN' INTO DREAMS",
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '8/3/2026',
+        img: 'assets/imgs/drivin-into-dream.png',
+        link: 'https://www.facebook.com/media/set/?set=a.122270646638240990&type=3&locale=vi_VN'
+    },
+    {
+        name: 'BanG Dream! & Chill',
+        type: 'OFFLINE',
+        category: 'BANDORI',
+        date: 'HN-T2/2026',
+        img: 'assets/imgs/bangdream.png',
+        link: 'https://www.facebook.com/share/p/1CgjSDxNHC/'
+    },
+    {
+        name: 'FANTASIA - COSPLAY FESTIVAL',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '26/10/2025',
+        img: 'assets/imgs/fantasia.png',
+        link: 'https://drive.google.com/drive/folders/14N3IJjL7Hx2ld_O2p4v-Uepr8ZDKMFVc?usp=drive_link'
+    },
+    {
+        name: 'TOGETHER, WE SIMP',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '05/10/2025',
+        img: 'assets/imgs/together-wesimp.JPG',
+        link: 'https://drive.google.com/drive/folders/1aZpmqqve2Lh8cbRFm1iKFSSEUegZ01tX'
+    },
+    {
+        name: 'STELLAR DRIFT 2025',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '18-20/07/2025',
+        img: 'assets/imgs/stellar-driff-2025.png',
+        link: 'https://www.facebook.com/share/p/1AnfM8vW6y/'
+    },
+    {
+        name: 'HOLOLIVE REUNION 2024',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '29/12/2024',
+        img: 'assets/imgs/offline-reunion-2024.png',
+        link: 'https://www.facebook.com/media/set/?set=a.122191460072240990&type=3&locale=vi_VN'
+    },
+    {
+        name: 'HOBBY HORIZON 2024',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '2/11/2024',
+        img: 'assets/imgs/hobby-horizion-2024.png',
+        link: 'https://www.facebook.com/media/set/?set=a.122155490024240990&type=3&locale=vi_VN'
+    },
+    {
+        name: 'BIGGEST HCM OFFLINE 2024',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '15/9/2024',
+        img: 'assets/imgs/biggest-hcm-offline-2024.png',
+        link: 'https://www.facebook.com/media/set/?set=a.122171821736240990&type=3&locale=vi_VN'
+    },
+    {
+        name: 'DA NANG OFFLINE 2024',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '14/7/2024',
+        img: 'assets/imgs/danang-2024.png',
+        link: 'https://www.facebook.com/share/p/18PW4L9D6R/'
+    },
+    {
+        name: 'FIRST HANOI OFFLINE',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '24/12/2023',
+        img: 'assets/imgs/first-hanoi-offline.jpg',
+        link: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL'
+    },
 ];
 
 export default async function home() {
 
-  return `
+    return `
         <section class="about" id="about">
-            <h1 class="title">WORLD SIMP & FRIENDS</h1>
-            <h2 class="desc">ABOUT</h2>
+            <h2 class="title">WORLD SIMP &amp; FRIENDS</h2>
+            <p class="desc">ABOUT</p>
             <div class="about__wrapper">
                 <div class="about__item">
                     <p class="about__item__title">
@@ -111,7 +111,7 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.png" alt="">
+                        <img src="assets/imgs/hero.png" alt="WS&F team illustration">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
@@ -122,8 +122,8 @@ export default async function home() {
         </section>
 
         <section class="about-detail" id="about-detail">
-            <h1 class="title">ABOUT US</h1>
-            <h2 class="desc">Who We Are</h2>
+            <h2 class="title">ABOUT US</h2>
+            <p class="desc">Who We Are</p>
             <div class="about-detail__content">
                 <p class="about-detail__text">
                     World Simp and Friends is a community event organizing team, focused on fandom culture, entertainment, and creative experiences.
@@ -138,17 +138,17 @@ export default async function home() {
         </section>
 
         <section class="projects" id="projects">
-            <h1 class="title">PROJECTS</h1>
-            <h2 class="desc">Our events and collaborations</h2>
+            <h2 class="title">PROJECTS</h2>
+            <p class="desc">Our events and collaborations</p>
             <div class="projects__grid">
                 ${projects.map(project => `
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project__card">
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project__card fade-in-up">
                         <div class="project__card__badges">
                             <span class="project__type">${project.type}</span>
                             <span class="project__category">${project.category}</span>
                         </div>
                         <div class="project__card__image">
-                            <img src="${project.img}" alt="${project.name}" class="project__img">
+                            <img src="${project.img}" alt="${project.name}" class="project__img" loading="lazy">
                         </div>
                         <div class="project__card__info">
                             <h3 class="project__name">${project.name}</h3>
@@ -160,12 +160,12 @@ export default async function home() {
         </section>
 
         <section class="network" id="network">
-            <h1 class="title">NETWORK</h1>
-            <h2 class="desc">Our community</h2>
+            <h2 class="title">NETWORK</h2>
+            <p class="desc">Our community</p>
             <div class="network__grid">
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/oricon.jpg" alt="Oricon Project">
+                        <img src="assets/imgs/oricon.jpg" alt="Oricon Project" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">ORICON PROJECT</h3>
@@ -180,9 +180,9 @@ export default async function home() {
                     </div>
                 </div>
 
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldlotho.jpg" alt="World Lốt Hố">
+                        <img src="assets/imgs/worldlotho.jpg" alt="World Lốt Hố" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD LỐT HỐ</h3>
@@ -203,9 +203,9 @@ export default async function home() {
                     </div>
                 </div>
 
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/wlhvanhungnguoiban.png" alt="World Lốt Hố Và Những Người Bạn">
+                        <img src="assets/imgs/wlhvanhungnguoiban.png" alt="World Lốt Hố Và Những Người Bạn" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD LỐT HỐ VÀ NHỮNG NGƯỜI BẠN</h3>
@@ -217,9 +217,9 @@ export default async function home() {
                     </div>
                 </div>
 
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldsimp.png" alt="World Simp and Friends">
+                        <img src="assets/imgs/worldsimp.png" alt="World Simp and Friends" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD SIMP AND FRIENDS</h3>
@@ -231,9 +231,9 @@ export default async function home() {
                     </div>
                 </div>
 
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/logo-odctsh.png" alt="Ở Đây Chúng Tôi Simp Hololive">
+                        <img src="assets/imgs/logo-odctsh.png" alt="Ở Đây Chúng Tôi Simp Hololive" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">Ở ĐÂY CHÚNG TÔI SIMP HOLOLIVE</h3>
@@ -248,9 +248,9 @@ export default async function home() {
                     </div>
                 </div>
 
-                <div class="network__card">
+                <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/thegioivtuber.png" alt="Thế Giới Vtuber">
+                        <img src="assets/imgs/thegioivtuber.png" alt="Thế Giới Vtuber" loading="lazy">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">THẾ GIỚI VTUBER</h3>
@@ -265,30 +265,30 @@ export default async function home() {
         </section>
 
         <section class="partner" id="partner">
-            <h1 class="title">PARTNER</h1>
-            <h2 class="desc">Our partners</h2>
+            <h2 class="title">PARTNER</h2>
+            <p class="desc">Our partners</p>
             <div class="partner__grid">
-                <a href="https://www.facebook.com/HobbyHorizonVN" target="_blank" rel="noopener noreferrer" class="partner__card">
+                <a href="https://www.facebook.com/HobbyHorizonVN" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/hobbyhorizon.png" alt="Hobby Horizon">
+                        <img src="assets/imgs/hobbyhorizon.png" alt="Hobby Horizon" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">HOBBY HORIZON</h3>
                     </div>
                 </a>
 
-                <a href="https://www.facebook.com/PeoPoStore" target="_blank" rel="noopener noreferrer" class="partner__card">
+                <a href="https://www.facebook.com/PeoPoStore" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/peopostore.png" alt="PeoPo Store">
+                        <img src="assets/imgs/peopostore.png" alt="PeoPo Store" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">PEOPO STORE</h3>
                     </div>
                 </a>
 
-                <a href="https://www.facebook.com/stellarsteps.event" target="_blank" rel="noopener noreferrer" class="partner__card">
+                <a href="https://www.facebook.com/stellarsteps.event" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/stellarstep.png" alt="Stellar Steps">
+                        <img src="assets/imgs/stellarstep.png" alt="Stellar Steps" loading="lazy">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">STELLAR STEPS</h3>
@@ -298,17 +298,17 @@ export default async function home() {
         </section>
 
         <section class="contact">
-            <h1 class="title">CONTACT</h1>
-            <h2 class="desc">
+            <h2 class="title">CONTACT</h2>
+            <p class="desc">
                 If you are interested, please contact us via email or facebook below
-            </h2>
+            </p>
             <div class="contact__wrapper">
                 <span class="contact__social">Email</span>
                 <div class="contact__wrapper__email">
                     <a href="mailto:admin@worldsimp.com" class="contact__mail">
                         admin@worldsimp.com
                     </a>
-                    <svg class="copy__email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="copyText('.contact__mail');">
+                    <svg class="copy__email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="button" tabindex="0" aria-label="Copy email address" data-copy-target=".contact__mail">
                         <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" />
                     </svg>
                 </div> 
