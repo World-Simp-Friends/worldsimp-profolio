@@ -256,9 +256,9 @@
     }
 
     .header__title p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal !important;
+        overflow: visible !important;
+        line-height: 1.2;
         max-width: 100%;
     }
 
@@ -424,9 +424,23 @@
     .content .about-detail .title,
     .content .works .title,
     .content .contact .title {
-        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
-        line-height: 1.1;
-        word-break: break-word; /* Prevent long words from cutting off */
+        font-size: clamp(2rem, 8vw, 4.2rem);
+        line-height: 1.3;
+        word-break: break-word;
+        white-space: normal !important;
+        display: flex;
+        flex-wrap: wrap; /* Allow title text and line to wrap */
+        align-items: center;
+        overflow: visible !important;
+    }
+
+    .content .about .title::after,
+    .content .about-detail .title::after,
+    .content .works .title::after,
+    .content .contact .title::after {
+        margin-left: 10px;
+        min-width: 20px;
+        flex-shrink: 1; /* Allow the line to shrink if text needs more space */
     }
 
     .content .about .desc,
@@ -547,9 +561,20 @@
 
     .content .projects .title,
     .content .projects>h1 {
-        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
-        line-height: 1.1;
+        font-size: clamp(2rem, 8vw, 4.2rem);
+        line-height: 1.3;
         word-break: break-word;
+        white-space: normal !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: visible !important;
+    }
+
+    .content .projects .title::after {
+        margin-left: 10px;
+        min-width: 20px;
+        flex-shrink: 1;
     }
 
     .content .projects .desc {
@@ -590,9 +615,20 @@
 
     .content .network .title,
     .content .network>h1 {
-        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
-        line-height: 1.1;
+        font-size: clamp(2rem, 8vw, 4.2rem);
+        line-height: 1.3;
         word-break: break-word;
+        white-space: normal !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: visible !important;
+    }
+
+    .content .network .title::after {
+        margin-left: 10px;
+        min-width: 20px;
+        flex-shrink: 1;
     }
 
     .content .network .desc {
@@ -656,9 +692,20 @@
 
     .content .partner .title,
     .content .partner>h1 {
-        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
-        line-height: 1.1;
+        font-size: clamp(2rem, 8vw, 4.2rem);
+        line-height: 1.3;
         word-break: break-word;
+        white-space: normal !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: visible !important;
+    }
+
+    .content .partner .title::after {
+        margin-left: 10px;
+        min-width: 20px;
+        flex-shrink: 1;
     }
 
     .content .partner .desc {
@@ -694,5 +741,7 @@
     .contact__mail__text,
     .contact__card__desc {
         font-size: 1.8rem;
+        white-space: normal !important;
+        word-break: break-word;
     }
 }

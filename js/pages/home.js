@@ -93,7 +93,7 @@ export default async function home() {
 
     return `
         <section class="about" id="about">
-            <h1 class="title">WORLD SIMP &amp;&nbsp;FRIENDS</h1>
+            <h1 class="title">WORLD SIMP &amp; FRIENDS</h1>
             <p class="desc">ABOUT</p>
             <div class="about__wrapper">
                 <div class="about__item">
