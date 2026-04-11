@@ -409,13 +409,6 @@
         font-size: 1.8rem;
     }
 
-    .content .about>h1,
-    .content .about-detail>h1,
-    .content .works>h1,
-    .content .contact>h1 {
-        font-size: 5.2rem;
-    }
-
     .content .about,
     .content .about-detail,
     .content .works,
@@ -423,12 +416,17 @@
         padding: 0 16px;
     }
 
+    .content .about>h1,
+    .content .about-detail>h1,
+    .content .works>h1,
+    .content .contact>h1,
     .content .about .title,
     .content .about-detail .title,
     .content .works .title,
     .content .contact .title {
-        font-size: 4.2rem;
-        line-height: 1;
+        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
+        line-height: 1.1;
+        word-break: break-word; /* Prevent long words from cutting off */
     }
 
     .content .about .desc,
@@ -547,13 +545,11 @@
         font-size: 1.6rem;
     }
 
-    .content .projects .title {
-        font-size: 4.2rem;
-        line-height: 1;
-    }
-
+    .content .projects .title,
     .content .projects>h1 {
-        font-size: 5.2rem;
+        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
+        line-height: 1.1;
+        word-break: break-word;
     }
 
     .content .projects .desc {
@@ -592,13 +588,11 @@
         width: 100%;
     }
 
-    .content .network .title {
-        font-size: 4.2rem;
-        line-height: 1;
-    }
-
+    .content .network .title,
     .content .network>h1 {
-        font-size: 5.2rem;
+        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
+        line-height: 1.1;
+        word-break: break-word;
     }
 
     .content .network .desc {
@@ -660,13 +654,11 @@
         width: 100%;
     }
 
-    .content .partner .title {
-        font-size: 4.2rem;
-        line-height: 1;
-    }
-
+    .content .partner .title,
     .content .partner>h1 {
-        font-size: 5.2rem;
+        font-size: clamp(2.8rem, 8.5vw, 4.2rem);
+        line-height: 1.1;
+        word-break: break-word;
     }
 
     .content .partner .desc {
