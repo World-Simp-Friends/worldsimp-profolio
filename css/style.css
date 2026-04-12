@@ -58,7 +58,11 @@
         box-sizing: border-box;
         text-shadow: rgba(0, 0, 0, 0) 0 0 0 !important;
         -webkit-text-stroke: 0.45px transparent !important;
+    }
 
+    ::selection {
+        background-color: var(--primary);
+        color: var(--on-primary);
     }
 
     html {
