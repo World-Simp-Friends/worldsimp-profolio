@@ -1,6 +1,3 @@
-document.addEventListener('selectstart', (e) => {
-    e.preventDefault();
-})
 
 
 function copyText(selector) {
