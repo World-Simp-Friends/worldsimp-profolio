@@ -1389,18 +1389,17 @@
     }
 
     .partner__grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 20px;
         margin-top: 50px;
-        max-width: 1350px;
+        max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .partner__card {
-        width: calc(23% - 15px);
+        width: 100%;
         display: flex;
         flex-direction: column;
         background-color: var(--white-color);

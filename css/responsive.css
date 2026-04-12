@@ -225,15 +225,21 @@
 
     .network__grid,
     .partner__grid {
+        display: grid;
         gap: 16px;
     }
 
-    .network__card {
-        width: calc(50% - 16px);
+    .network__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .partner__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .network__card,
     .partner__card {
-        width: calc(33.333% - 16px);
+        width: 100%;
     }
 }
 
@@ -516,7 +522,31 @@
     }
 
     .footer {
-        margin-top: 70px;
+        margin-top: 60px;
+        padding: 40px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 24px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .footer__links a {
+        font-size: 1.5rem;
+    }
+
+    .copy {
+        font-size: 1.35rem;
+        line-height: 1.5;
+        opacity: 0.9;
     }
 
     .page__artist {
@@ -609,10 +639,12 @@
     .network__grid {
         margin-top: 25px;
         gap: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .network__card {
-        width: calc(50% - 8px);
+        width: 100%;
     }
 
     .content .network .title,
@@ -686,10 +718,11 @@
     .partner__grid {
         margin-top: 25px;
         gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .partner__card {
-        width: calc(50% - 8px);
+        width: 100%;
     }
 
     .content .partner .title,
