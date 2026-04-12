@@ -322,6 +322,15 @@ export default async function home() {
                     </div>
                 </a>
 
+                <a href="https://www.facebook.com/CabWeebs" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
+                    <div class="partner__card__img">
+                        <img src="assets/imgs/cabweebs.webp" alt="Cab Weebs" loading="lazy">
+                    </div>
+                    <div class="partner__card__info">
+                        <h3 class="partner__card__name">CAB WEEBS</h3>
+                    </div>
+                </a>
+
                 <a href="https://www.facebook.com/stellarsteps.event" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
                         <img src="assets/imgs/stellarstep.webp" alt="Stellar Steps" loading="lazy">
