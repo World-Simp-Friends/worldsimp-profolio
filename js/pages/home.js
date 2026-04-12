@@ -172,8 +172,7 @@ const projects = [
 ];
 
 export default async function home() {
-
-    return `
+    const html = `
         <section class="about" id="about">
             <h1 class="title">WORLD SIMP &amp; FRIENDS</h1>
             <p class="desc">ABOUT</p>
@@ -193,7 +192,7 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration">
+                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration" fetchpriority="high" decoding="async" width="800" height="800">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
@@ -220,13 +219,13 @@ export default async function home() {
         </section>
 
         <section class="projects" id="projects">
-            <h2 class="title">PROJECTS</h2>
-            <p class="desc">Our events and collaborations</p>
+            <h2 class="title">OUR PROJECTS</h2>
+            <p class="desc">A Legacy of Creative Enthusiast Gatherings</p>
             <div class="projects__grid">
                 ${projects.map(project => `
                     <div role="button" tabindex="0" data-event="${encodeURIComponent(JSON.stringify(project))}" class="project__card fade-in-up">
                         <div class="project__card__image-wrapper">
-                            <img src="${project.img}" alt="${project.name}" class="project__img" loading="lazy">
+                            <img src="${project.img}" alt="${project.name}" class="project__img" loading="lazy" decoding="async" width="1280" height="720">
                             <div class="project__card__overlay">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="project__card__icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </div>
@@ -254,12 +253,12 @@ export default async function home() {
         </section>
 
         <section class="network" id="network">
-            <h2 class="title">NETWORK</h2>
-            <p class="desc">Our community</p>
+            <h2 class="title">OUR NETWORK</h2>
+            <p class="desc">Connecting Fandoms and Fans Worldwide</p>
             <div class="network__grid">
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/oricon.webp" alt="Oricon Project" loading="lazy">
+                        <img src="assets/imgs/oricon.webp" alt="Oricon Project" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">ORICON PROJECT</h3>
@@ -276,7 +275,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldlotho.webp" alt="World Lotho" loading="lazy">
+                        <img src="assets/imgs/worldlotho.webp" alt="World Lotho" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD LOT HO</h3>
@@ -299,7 +298,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldlotho-discord.webp" alt="World Lotho Discord" loading="lazy">
+                        <img src="assets/imgs/worldlotho-discord.webp" alt="World Lotho Discord" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD LOT HO DISCORD</h3>
@@ -315,7 +314,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/wlhvanhungnguoiban.webp" alt="World Lotho And Friends" loading="lazy">
+                        <img src="assets/imgs/wlhvanhungnguoiban.webp" alt="World Lotho And Friends" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD LOT HO AND&nbsp;FRIENDS</h3>
@@ -329,7 +328,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/worldsimp.webp" alt="World Simp and Friends" loading="lazy">
+                        <img src="assets/imgs/worldsimp.webp" alt="World Simp and Friends" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WORLD SIMP AND&nbsp;FRIENDS</h3>
@@ -343,7 +342,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/logo-odctsh.webp" alt="We Simp Hololive Here" loading="lazy">
+                        <img src="assets/imgs/logo-odctsh.webp" alt="We Simp Hololive Here" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">WE SIMP HOLOLIVE HERE</h3>
@@ -360,7 +359,7 @@ export default async function home() {
 
                 <div class="network__card fade-in-up">
                     <div class="network__card__img">
-                        <img src="assets/imgs/thegioivtuber.webp" alt="VTuber World" loading="lazy">
+                        <img src="assets/imgs/thegioivtuber.webp" alt="VTuber World" loading="lazy" decoding="async" width="300" height="300">
                     </div>
                     <div class="network__card__info">
                         <h3 class="network__card__name">VTUBER WORLD</h3>
@@ -375,12 +374,12 @@ export default async function home() {
         </section>
 
         <section class="partner" id="partner">
-            <h2 class="title">PARTNER</h2>
-            <p class="desc">Our partners</p>
+            <h2 class="title">OUR PARTNERS</h2>
+            <p class="desc">Collaborating for Premium Fan Experiences</p>
             <div class="partner__grid">
                 <a href="https://www.facebook.com/HobbyHorizonVN" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/hobbyhorizon.webp" alt="Hobby Horizon" loading="lazy">
+                        <img src="assets/imgs/hobbyhorizon.webp" alt="Hobby Horizon" loading="lazy" decoding="async" width="200" height="200">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">HOBBY HORIZON</h3>
@@ -389,7 +388,7 @@ export default async function home() {
 
                 <a href="https://www.facebook.com/PeoPoStore" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/peopostore.webp" alt="PeoPo Store" loading="lazy">
+                        <img src="assets/imgs/peopostore.webp" alt="PeoPo Store" loading="lazy" decoding="async" width="200" height="200">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">PEOPO STORE</h3>
@@ -398,7 +397,7 @@ export default async function home() {
 
                 <a href="https://www.facebook.com/CabWeebs" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/cabweebs.webp" alt="Cab Weebs" loading="lazy">
+                        <img src="assets/imgs/cabweebs.webp" alt="Cab Weebs" loading="lazy" decoding="async" width="200" height="200">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">CAB WEEBS</h3>
@@ -407,7 +406,7 @@ export default async function home() {
 
                 <a href="https://www.facebook.com/stellarsteps.event" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
                     <div class="partner__card__img">
-                        <img src="assets/imgs/stellarstep.webp" alt="Stellar Steps" loading="lazy">
+                        <img src="assets/imgs/stellarstep.webp" alt="Stellar Steps" loading="lazy" decoding="async" width="200" height="200">
                     </div>
                     <div class="partner__card__info">
                         <h3 class="partner__card__name">STELLAR STEPS</h3>

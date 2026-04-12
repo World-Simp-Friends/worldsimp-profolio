@@ -13,6 +13,7 @@
         content="World Simp Friends, WS&F, Hololive community, VTuber offline, VTuber events, fandom conventions, anime gatherings, pop culture event, Hololive fans">
     <meta name="author" content="World Simp & Friends">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="revised" content="2026-04-12">
     <link rel="canonical" href="https://worldsimp.com/">
 
     <!-- Open Graph / Meta Social -->
@@ -37,6 +38,12 @@
     <!-- Resource Hints & Preconnects for Web Vitals Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="/assets/fonts/KHInterferenceTRIAL-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/NATS-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/imgs/hero.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/assets/imgs/logo.webp" as="image">
 
 
     <!-- Styles -->
@@ -330,7 +337,7 @@
     </div>
 
     <script defer src="/js/app.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 </body>
 
 </html>

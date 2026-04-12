@@ -342,7 +342,9 @@
 
     .content .about,
     .content .about-detail,
-    .content .works,
+    .content .projects,
+    .content .network,
+    .content .partner,
     .content .contact {
         padding: 90px 60px 0;
         color: var(--primary-color);
@@ -351,7 +353,9 @@
 
     .content .about .title::after,
     .content .about-detail .title::after,
-    .content .works .title::after,
+    .content .projects .title::after,
+    .content .network .title::after,
+    .content .partner .title::after,
     .content .contact .title::after {
         content: '';
         flex: 1;
@@ -361,12 +365,15 @@
 
     .content .about .title,
     .content .about-detail .title,
-    .content .works .title,
+    .content .projects .title,
+    .content .network .title,
+    .content .partner .title,
     .content .contact .title {
         position: relative;
-        font-size: var(--text-5xl);
+        font-size: clamp(3.2rem, 5.5vw, 6.4rem);
         display: flex;
         align-items: center;
+        white-space: nowrap;
         line-height: 1.1;
         letter-spacing: .02em;
         font-weight: 600;

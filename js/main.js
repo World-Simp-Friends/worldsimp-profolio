@@ -113,7 +113,7 @@ class Router {
         const desc = document.getElementById('modal-desc');
         const actions = document.getElementById('modal-actions');
         
-        cover.innerHTML = `<img src="${data.img}" alt="${data.name}" loading="lazy"><div class="overlay"></div>`;
+        cover.innerHTML = `<img src="${data.img}" alt="${data.name}" loading="lazy" width="1280" height="720" decoding="async"><div class="overlay"></div>`;
         title.textContent = data.name;
         
         badges.innerHTML = `
