@@ -153,12 +153,24 @@
     }
 
     /* GLOBAL TYPOGRAPHY OVERWRITES */
-    h1, h2, h3, h4, h5, h6, .title, strong, b, .header__title {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title,
+    strong,
+    b,
+    .header__title {
         font-family: "KH Interference", sans-serif;
         font-weight: 700;
     }
 
-    p, span, li, a {
+    p,
+    span,
+    li,
+    a {
         font-family: "KH Interference", sans-serif;
         font-weight: 400;
     }
@@ -921,7 +933,7 @@
         backface-visibility: hidden;
     }
 
-    a.project__card:hover {
+    .project__card:hover {
         transform: translate(-6px, -6px);
         box-shadow: 16px 16px 0px rgba(64, 145, 255, 0.25);
     }
@@ -943,7 +955,7 @@
         display: block;
     }
 
-    a.project__card:hover .project__img {
+    .project__card:hover .project__img {
         transform: scale(1.08);
     }
 
@@ -963,7 +975,7 @@
         pointer-events: none;
     }
 
-    a.project__card:hover .project__card__overlay {
+    .project__card:hover .project__card__overlay {
         opacity: 1;
     }
 
@@ -979,7 +991,7 @@
         transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    a.project__card:hover .project__card__icon {
+    .project__card:hover .project__card__icon {
         transform: translateX(0) translateY(0);
     }
 
@@ -1024,7 +1036,8 @@
 
     /* VIEW MORE BUTTON */
     .project__view-more {
-        display: none; /* Hidden by default (PC/Tablet) */
+        display: none;
+        /* Hidden by default (PC/Tablet) */
         justify-content: center;
         margin-top: 40px;
         width: 100%;
@@ -1101,7 +1114,7 @@
         letter-spacing: 0.02em;
     }
 
-    a.project__card {
+    .project__card {
         text-decoration: none;
         color: inherit;
         display: flex;
@@ -1960,4 +1973,246 @@
         text-align: center;
         color: rgba(255, 255, 255, 0.65);
         letter-spacing: 0.04em;
+    }
+
+    /* ==========================================================================
+   GLOBAL EVENT MODAL
+   ========================================================================== */
+    .event-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .event-modal.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .event-modal__backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(240, 247, 255, 0.85);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        cursor: pointer;
+    }
+
+    .event-modal__container {
+        position: relative;
+        width: 90%;
+        max-width: 600px;
+        max-height: 90vh;
+        background-color: var(--white-color);
+        border: 3px solid var(--primary-color);
+        border-radius: 20px;
+        box-shadow: 8px 8px 0px rgba(64, 145, 255, 0.25);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(20px) scale(0.98);
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .event-modal.open .event-modal__container {
+        transform: translateY(0) scale(1);
+    }
+
+    .event-modal__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--white-color);
+        border: 3px solid var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-color);
+        cursor: pointer;
+        box-shadow: 4px 4px 0px rgba(64, 145, 255, 0.2);
+        z-index: 10;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .event-modal__close:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        transform: translate(-2px, -2px) rotate(90deg);
+        box-shadow: 6px 6px 0px rgba(64, 145, 255, 0.3);
+    }
+
+    .event-modal__close svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .event-modal__content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .event-modal__content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .event-modal__content::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 4px;
+    }
+
+    .event-modal__cover {
+        width: 100%;
+        height: 240px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .event-modal__cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .event-modal__cover .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, var(--white-color) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .event-modal__body {
+        padding: 0 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: -20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .event-modal__badges {
+        display: flex;
+        gap: 10px;
+    }
+
+    .event-modal__title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        font-family: "KH Interference", sans-serif;
+        color: var(--primary-color);
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+
+    .event-modal__info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 12px;
+    }
+
+    .event-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .event-info-item svg {
+        width: 20px;
+        height: 20px;
+        color: var(--primary-color);
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .event-info-item div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-info-label {
+        font-size: 1.2rem;
+        color: #7AB5FF;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-family: "KH Interference", sans-serif;
+    }
+
+    .event-info-value {
+        font-size: 1.4rem;
+        color: #444;
+        font-weight: 600;
+        margin-top: 2px;
+    }
+
+    .event-modal__desc {
+        font-size: 1.4rem;
+        color: #555;
+        line-height: 1.6;
+        border-top: 2px solid var(--primary-color);
+        padding-top: 16px;
+        white-space: pre-line;
+    }
+
+    .event-modal__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .event-modal__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 30px;
+        border-radius: 100vmax;
+        background-color: var(--white-color);
+        border: 3px solid var(--primary-color);
+        color: var(--primary-color);
+        font-family: "KH Interference", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 4px 4px 0px rgba(64, 145, 255, 0.2);
+    }
+
+    .event-modal__btn:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        transform: translate(-3px, -3px);
+        box-shadow: 6px 6px 0px rgba(64, 145, 255, 0.3);
+    }
+
+    .event-modal__btn svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .event-modal__btn:hover svg {
+        transform: scale(1.1);
     }

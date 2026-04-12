@@ -747,3 +747,39 @@
         word-break: break-word;
     }
 }
+
+/* ==========================================================================
+   EVENT MODAL RESPONSIVE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .event-modal__container {
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+    
+    .event-modal__cover {
+        height: 200px;
+    }
+    
+    .event-modal__body {
+        padding: 0 16px 20px 16px;
+    }
+    
+    .event-modal__title {
+        font-size: 1.8rem;
+    }
+    
+    .event-modal__info-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .event-modal__close {
+        top: 20px;
+        right: 20px;
+    }
+}

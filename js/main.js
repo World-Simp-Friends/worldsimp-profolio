@@ -73,7 +73,124 @@ class Router {
 
         window.addEventListener('popstate', () => this.handleRouteChange());
         window.addEventListener('beforeunload', () => this.saveScrollPosition());
+        
+        this.initEventModal();
         this.handleRouteChange();
+    }
+
+    initEventModal() {
+        document.addEventListener('click', (e) => {
+            const projectCard = e.target.closest('.project__card[data-event]');
+            if (projectCard) {
+                try {
+                    const eventData = JSON.parse(decodeURIComponent(projectCard.getAttribute('data-event')));
+                    this.openEventModal(eventData);
+                } catch (err) {
+                    console.error("Failed to parse event data", err);
+                }
+                return;
+            }
+
+            // Close modal via backdrop or close button
+            if (e.target.closest('#event-modal-close') || e.target.id === 'event-modal-backdrop') {
+                this.closeEventModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.closeEventModal();
+        });
+    }
+
+    openEventModal(data) {
+        const modal = document.getElementById('event-modal');
+        if (!modal) return;
+        
+        const cover = document.querySelector('.event-modal__cover');
+        const title = document.getElementById('modal-title');
+        const badges = document.getElementById('modal-badges');
+        const infoGrid = document.getElementById('modal-info-grid');
+        const desc = document.getElementById('modal-desc');
+        const actions = document.getElementById('modal-actions');
+        
+        cover.innerHTML = `<img src="${data.img}" alt="${data.name}" loading="lazy"><div class="overlay"></div>`;
+        title.textContent = data.name;
+        
+        badges.innerHTML = `
+            ${data.type ? `<span class="project__type">${data.type}</span>` : ''}
+            ${data.category ? `<span class="project__category">${data.category}</span>` : ''}
+        `;
+        
+        let infoHtml = '';
+        if (data.date) infoHtml += this.createModalInfoRow('Date', data.date, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>');
+        if (data.location) infoHtml += this.createModalInfoRow('Location', data.location, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>');
+        if (data.duration) infoHtml += this.createModalInfoRow('Duration', data.duration, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>');
+        if (data.attendees) infoHtml += this.createModalInfoRow('Attendees', data.attendees, '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>');
+        
+        infoGrid.innerHTML = infoHtml;
+        
+        desc.textContent = data.desc || '';
+        desc.style.display = data.desc ? 'block' : 'none';
+        
+        actions.innerHTML = '';
+        
+        // Support for multiple links or a single link
+        const linkList = data.links || (data.link ? [{ url: data.link }] : []);
+        
+        linkList.forEach(item => {
+            const url = item.url;
+            const isYoutube = url.includes('youtu');
+            const isFB = url.includes('facebook');
+            const isDrive = url.includes('drive.google');
+            
+            let btnLabel = item.label;
+            if (!btnLabel) {
+                btnLabel = isYoutube ? 'Watch on Youtube' : (isFB ? 'View on Facebook' : (isDrive ? 'View Photos' : 'View Info'));
+            }
+            
+            let iconSvg = '';
+            if (isYoutube) {
+                iconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>';
+            } else if (isFB) {
+                iconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>';
+            } else if (isDrive) {
+                iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19H2V5h20v14z"></path><path d="M2 7h20"></path><path d="M9 22v-3"></path><path d="M15 22v-3"></path></svg>';
+            } else {
+                iconSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+            }
+                
+            const btn = document.createElement('a');
+            btn.href = url;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.className = 'event-modal__btn';
+            btn.innerHTML = `${iconSvg} <span>${btnLabel}</span>`;
+            actions.appendChild(btn);
+        });
+        
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeEventModal() {
+        const modal = document.getElementById('event-modal');
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    createModalInfoRow(label, value, iconHtml) {
+        return `
+            <div class="event-info-item">
+                ${iconHtml}
+                <div>
+                    <span class="event-info-label">${label}</span>
+                    <span class="event-info-value">${value}</span>
+                </div>
+            </div>
+        `;
     }
 
     toggleMobileNav() {

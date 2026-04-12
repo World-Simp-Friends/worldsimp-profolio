@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO & GEO (Generative Engine Optimization) -->
     <title>WS&F — World Simp & Friends | Premier VTuber & Hololive Community Events</title>
-    <meta name="description" content="World Simp & Friends (WS&F) — A pioneering community organizing Hololive, VTuber, Anime, and pop culture offline events. Connecting fans, sharing passions, and creating unforgettable experiences.">
-    <meta name="keywords" content="World Simp Friends, WS&F, Hololive community, VTuber offline, VTuber events, fandom conventions, anime gatherings, pop culture event, Hololive fans">
+    <meta name="description"
+        content="World Simp & Friends (WS&F) — A pioneering community organizing Hololive, VTuber, Anime, and pop culture offline events. Connecting fans, sharing passions, and creating unforgettable experiences.">
+    <meta name="keywords"
+        content="World Simp Friends, WS&F, Hololive community, VTuber offline, VTuber events, fandom conventions, anime gatherings, pop culture event, Hololive fans">
     <meta name="author" content="World Simp & Friends">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://worldsimp.com/">
@@ -16,7 +19,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://worldsimp.com/">
     <meta property="og:title" content="WS&F — World Simp & Friends | Premier VTuber Offline Events">
-    <meta property="og:description" content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
+    <meta property="og:description"
+        content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
     <!-- MUST be Absolute URL for correct OG Scraping -->
     <meta property="og:image" content="https://worldsimp.com/assets/imgs/metadata.webp">
     <meta property="og:image:width" content="1200">
@@ -26,7 +30,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://worldsimp.com/">
     <meta name="twitter:title" content="WS&F — World Simp & Friends">
-    <meta name="twitter:description" content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
+    <meta name="twitter:description"
+        content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
     <meta name="twitter:image" content="https://worldsimp.com/assets/imgs/metadata.webp">
 
     <!-- Resource Hints & Preconnects for Web Vitals Optimization -->
@@ -96,14 +101,12 @@
             left: -100%;
             width: 300%;
             height: 300%;
-            background: linear-gradient(
-                45deg,
-                rgba(64, 145, 255, 0) 0%,
-                rgba(64, 145, 255, 0.03) 45%,
-                rgba(64, 145, 255, 0.08) 50%,
-                rgba(64, 145, 255, 0.03) 55%,
-                rgba(64, 145, 255, 0) 100%
-            );
+            background: linear-gradient(45deg,
+                    rgba(64, 145, 255, 0) 0%,
+                    rgba(64, 145, 255, 0.03) 45%,
+                    rgba(64, 145, 255, 0.08) 50%,
+                    rgba(64, 145, 255, 0.03) 55%,
+                    rgba(64, 145, 255, 0) 100%);
             animation: loaderShimmer 4s infinite linear;
             pointer-events: none;
         }
@@ -170,23 +173,49 @@
         }
 
         @keyframes loaderShimmer {
-            0% { transform: translate(-30%, -30%) rotate(0deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0% {
+                transform: translate(-30%, -30%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
         }
 
         @keyframes loaderFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-10px) scale(1.02); }
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-10px) scale(1.02);
+            }
         }
 
         @keyframes loaderSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes loaderPulseText {
-            0%, 100% { opacity: 0.5; transform: scale(0.98); }
-            50% { opacity: 1; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(0.98);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .global-loader.hidden {
@@ -196,6 +225,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Global Loading Screen -->
     <div id="global-loader" class="global-loader">
@@ -216,7 +246,7 @@
                 <div class="logo">
                     <img src="/assets/imgs/logo.webp" alt="WS&F Logo" width="50" height="50">
                 </div>
-                <p aria-hidden="true">WS&F</p>
+                <!-- <p aria-hidden="true">WS&F</p> -->
             </a>
 
             <!-- Desktop Nav -->
@@ -266,7 +296,41 @@
         </footer>
     </div>
 
+    <!-- Global Event Modal -->
+    <div id="event-modal" class="event-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="event-modal__backdrop" id="event-modal-backdrop"></div>
+        <div class="event-modal__container">
+            <button class="event-modal__close" id="event-modal-close" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="event-modal__content">
+                <div class="event-modal__cover">
+                    <!-- img and overlay injected by JS -->
+                </div>
+                <div class="event-modal__body">
+                    <div class="event-modal__badges" id="modal-badges"></div>
+                    <h3 class="event-modal__title" id="modal-title"></h3>
+
+                    <div class="event-modal__info-grid" id="modal-info-grid">
+                        <!-- info rows injected here if present -->
+                    </div>
+
+                    <div class="event-modal__desc" id="modal-desc"></div>
+
+                    <div class="event-modal__actions" id="modal-actions">
+                        <!-- social/action links injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script defer src="/js/app.js"></script>
     <script src="/js/main.js"></script>
 </body>
+
 </html>
