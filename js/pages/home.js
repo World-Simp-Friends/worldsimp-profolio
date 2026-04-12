@@ -1,178 +1,178 @@
 const projects = [
-    {
-        name: 'WELCOME OLLIE AND SHIORI',
-        type: 'COMMUNITY',
-        category: 'HOLOLIVE',
-        date: 'April 4-5, 2026',
-        img: 'assets/imgs/ollie-and-shiori.webp',
-        desc: 'A community-driven fundraising project dedicated to welcoming Hololive VTubers Kureiji Ollie and Shiori Novella to the community.',
-        links: [
-            { label: 'View on Facebook', url: 'https://www.facebook.com/media/set/?set=a.122279677238240990&type=3' },
-            { label: 'View on X', url: 'https://x.com/oriconproject/status/2040309021341815050' },
-            { label: 'View Photos', url: 'https://drive.google.com/drive/folders/1MhPky8YSW-ffNP3oIUs3_upoV9fOC1MH?usp=drive_link' }
-        ]
-    },
-    {
-        name: "DRIVIN' INTO DREAMS - FIRST HANOI LARGE OFFLINE",
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'March 8, 2026',
-        img: 'assets/imgs/drivin-into-dream.webp',
-        desc: 'The largest Hololive offline event ever organized in Hanoi, celebrating the community with over 190 fans and an immersive 10-hour marathon timeline.',
-        location: 'Hanoi',
-        duration: '10 Hours',
-        attendees: '190+',
-        links: [
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122270646638240990&type=3' },
-            { label: 'Post Highlights', url: 'https://www.facebook.com/share/p/1HoGvP1xaw/' },
-            { label: 'Community Group', url: 'https://www.facebook.com/groups/648952319154737/?multi_permalinks=1743329343050357&ref=share' }
-        ]
-    },
-    {
-        name: 'BanG Dream! & Chill',
-        type: 'OFFLINE',
-        category: 'BANDORI',
-        date: 'February 28, 2026',
-        img: 'assets/imgs/bangdream.webp',
-        desc: 'Collaborative event support focused on building the ticketing system and logistical framework for the BanG Dream! community in Hanoi.',
-        location: 'Hanoi',
-        duration: '8 Hours',
-        links: [
-            { label: 'Event Website', url: 'https://stellarsteps.worldsimp.com/event/BDnC' },
-            { label: 'Facebook Page 1', url: 'https://www.facebook.com/share/p/18hRUViEkS/' },
-            { label: 'Facebook Page 2', url: 'https://www.facebook.com/share/p/1FaFDfgsmt/' }
-        ]
-    },
-    {
-        name: 'HOLOLIVE OFF-FAN @ FANTASIA COSPLAY FESTIVAL',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'October 26, 2025',
-        img: 'assets/imgs/off-fan-fantasia.webp',
-        desc: 'A vibrant Hololive fan gathering held within the iconic Fantasia - Cosplay Festival in Hanoi, bringing niche passion to the big stage.',
-        location: 'Hanoi',
-        duration: '8 Hours',
-        links: [
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122246959058240990&type=3' },
-            { label: 'View Photos', url: 'https://drive.google.com/drive/folders/14N3IJjL7Hx2ld_O2p4v-Uepr8ZDKMFVc?usp=drive_link' }
-        ]
-    },
-    {
-        name: 'TOGETHER, WE SIMP - HO CHI MINH CITY',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'October 5, 2025',
-        img: 'assets/imgs/together-wesimp.webp',
-        desc: 'A high-energy Hololive fan celebration in Ho Chi Minh City, hosting over 130 attendees for an 8-hour session of bonding and community activities.',
-        location: 'Ho Chi Minh City',
-        duration: '8 Hours',
-        attendees: '130+',
-        links: [
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122242727456240990&type=3' },
-            { label: 'View Photos', url: 'https://drive.google.com/drive/folders/1aZpmqqve2Lh8cbRFm1iKFSSEUegZ01tX' }
-        ]
-    },
-    {
-        name: 'STELLAR DRIFT 2025 - HOBBY HORIZON',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'July 18-20, 2025',
-        img: 'assets/imgs/stellar-driff-2025.webp',
-        desc: 'A premium Hololive community event at Hobby Horizon: Stellar Drift 2025, featuring special appearances by community favorites Jimmy and TaoTan.',
-        location: 'Ho Chi Minh City',
-        duration: '8 Hours',
-        links: [
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122229984374240990&type=3' }
-        ]
-    },
-    {
-        name: 'HOLOLIVE REUNION 2024 - DUAL CITY EDITION',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'December 29, 2024',
-        img: 'assets/imgs/offline-reunion-2024.webp',
-        desc: 'The first nationwide Hololive reunion organized across both Hanoi and Ho Chi Minh City, successfully uniting 300+ fans in a coordinated cross-country celebration.',
-        location: 'Ho Chi Minh City - Hanoi',
-        duration: '8 Hours',
-        attendees: '300+',
-        links: [
-            { label: 'Album 1 (FB)', url: 'https://www.facebook.com/media/set/?set=a.122184987662240990&type=3' },
-            { label: 'Album 2 (FB)', url: 'https://www.facebook.com/media/set/?set=a.122191460072240990&type=3' }
-        ]
-    },
-    {
-        name: 'HOBBY HORIZON: ESCAPE VELOCITY 2024',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'November 2, 2024',
-        img: 'assets/imgs/hobby-horizion-2024.webp',
-        desc: 'A major collaborative event bringing the Hololive community together at the Hobby Horizon: Escape Velocity 2024 festival.',
-        location: 'Ho Chi Minh City',
-        duration: '8 Hours',
-        links: [
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122155490024240990&type=3' }
-        ]
-    },
-    {
-        name: 'BIGGEST HOLOLIVE OFFLINE IN HO CHI MINH CITY 2024',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'September 15, 2024',
-        img: 'assets/imgs/biggest-hcm-offline-2024.webp',
-        desc: 'The landmark achievement for the community—the largest Hololive-only offline event in Ho Chi Minh City with over 160 participants and an 8-hour timeline.',
-        location: 'Ho Chi Minh City',
-        duration: '8 Hours',
-        attendees: '160+',
-        links: [
-            { label: 'Event Album 1', url: 'https://www.facebook.com/media/set/?set=a.122157018212240990&type=3' },
-            { label: 'Event Album 2', url: 'https://www.facebook.com/media/set/?set=a.122171821736240990&type=3' }
-        ]
-    },
-    {
-        name: 'DA NANG HOLOLIVE OFFLINE 2024',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'July 14, 2024',
-        img: 'assets/imgs/danang-2024.webp',
-        desc: 'An intimate and passionate Hololive fan gathering in the heart of Da Nang, marking a successful expansion to central Vietnam.',
-        location: 'Da Nang',
-        duration: '8 Hours',
-        attendees: '70',
-        links: [
-            { label: 'Highlight Post', url: 'https://www.facebook.com/share/p/18PW4L9D6R/' },
-            { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?vanity=worldlotho&set=a.122147909498240990&type=3' }
-        ]
-    },
-    {
-        name: 'THE FIRST HOLOLIVE OFFLINE IN HANOI',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'December 24, 2023',
-        img: 'assets/imgs/first-hanoi-offline.webp',
-        desc: "The historic inaugural Hololive fan offline event in Hanoi, attracting over 150 attendees and setting the stage for the community's future in the capital.",
-        location: 'Hanoi',
-        duration: '8 Hours',
-        attendees: '150+',
-        links: [
-            { label: 'Watch Highlights', url: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL' }
-        ]
-    },
-    {
-        name: 'FIRST HOLOLIVE OFFLINE IN HO CHI MINH CITY',
-        type: 'OFFLINE',
-        category: 'HOLOLIVE',
-        date: 'August 6, 2023',
-        img: 'assets/imgs/first-hcm-offline.webp',
-        link: 'https://youtu.be/LwtEW12Exs4?si=vq6mFMYuOdfxOmWH',
-        desc: 'This is the first offline event held in Ho Chi Minh City with a scale of over 150 attendees and an 8-hour timeline, serving as the kickoff for all future WS&F events.',
-        location: 'Ho Chi Minh City',
-        duration: '8 Hours',
-        attendees: '150+'
-    },
+  {
+    name: 'WELCOME OLLIE AND SHIORI TO VIETNAM',
+    type: 'COMMUNITY',
+    category: 'HOLOLIVE',
+    date: 'April 4-5, 2026',
+    img: 'assets/imgs/ollie-and-shiori.webp',
+    desc: 'A community-driven fundraising project dedicated to welcoming Hololive VTubers Kureiji Ollie and Shiori Novella to Vietnam for the first time at Color Fiesta 16: Bản Sắc',
+    links: [
+      { label: 'View on Facebook', url: 'https://www.facebook.com/media/set/?set=a.122279677238240990&type=3' },
+      { label: 'View on X', url: 'https://x.com/oriconproject/status/2040309021341815050' },
+      { label: 'View Photos', url: 'https://drive.google.com/drive/folders/1MhPky8YSW-ffNP3oIUs3_upoV9fOC1MH?usp=drive_link' }
+    ]
+  },
+  {
+    name: "OFFLINE HOLOLIVE HANOI 2026 - Drivin' into Dreams",
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'March 8, 2026',
+    img: 'assets/imgs/drivin-into-dream.webp',
+    desc: 'The largest Hololive offline event ever organized in Hanoi, celebrating the community with over 190 fans and an immersive 10-hour marathon timeline.',
+    location: 'Hanoi',
+    duration: '10 Hours',
+    attendees: '190+',
+    links: [
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122270646638240990&type=3' },
+      { label: 'Post Highlights', url: 'https://www.facebook.com/share/p/1HoGvP1xaw/' },
+      { label: 'Community Group', url: 'https://www.facebook.com/groups/648952319154737/?multi_permalinks=1743329343050357&ref=share' }
+    ]
+  },
+  {
+    name: 'BanG Dream! & Chill',
+    type: 'OFFLINE',
+    category: 'BanG Dream!',
+    date: 'February 28, 2026',
+    img: 'assets/imgs/bangdream.webp',
+    desc: 'Collaborative event support focused on building the ticketing system and logistical framework for the BanG Dream! community in Hanoi.',
+    location: 'Hanoi',
+    duration: '8 Hours',
+    links: [
+      { label: 'Event Website', url: 'https://stellarsteps.worldsimp.com/event/BDnC' },
+      { label: 'Facebook Page 1', url: 'https://www.facebook.com/share/p/18hRUViEkS/' },
+      { label: 'Facebook Page 2', url: 'https://www.facebook.com/share/p/1FaFDfgsmt/' }
+    ]
+  },
+  {
+    name: 'HOLOLIVE OFF-FAN @ FANTASIA COSPLAY FESTIVAL',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'October 26, 2025',
+    img: 'assets/imgs/off-fan-fantasia.webp',
+    desc: 'A vibrant Hololive fan gathering held within the iconic Fantasia - Cosplay Festival in Hanoi, bringing niche passion to the big stage.',
+    location: 'Hanoi',
+    duration: '8 Hours',
+    links: [
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122246959058240990&type=3' },
+      { label: 'View Photos', url: 'https://drive.google.com/drive/folders/14N3IJjL7Hx2ld_O2p4v-Uepr8ZDKMFVc?usp=drive_link' }
+    ]
+  },
+  {
+    name: 'OFFLINE HOLOLIVE HO CHI MINH - TOGETHER, WE SIMP',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'October 5, 2025',
+    img: 'assets/imgs/together-wesimp.webp',
+    desc: 'A high-energy Hololive fan celebration in Ho Chi Minh City, hosting over 130 attendees for an 8-hour session of bonding and community activities.',
+    location: 'Ho Chi Minh City',
+    duration: '8 Hours',
+    attendees: '130+',
+    links: [
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122242727456240990&type=3' },
+      { label: 'View Photos', url: 'https://drive.google.com/drive/folders/1aZpmqqve2Lh8cbRFm1iKFSSEUegZ01tX' }
+    ]
+  },
+  {
+    name: 'STELLAR DRIFT 2025 - HOBBY HORIZON',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'July 18-20, 2025',
+    img: 'assets/imgs/stellar-driff-2025.webp',
+    desc: 'A premium Hololive community event at Hobby Horizon: Stellar Drift 2025, featuring special appearances by community favorites Jimmy and TaoTan.',
+    location: 'Ho Chi Minh City',
+    duration: '8 Hours',
+    links: [
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122229984374240990&type=3' }
+    ]
+  },
+  {
+    name: 'OFFLINE HOLOLIVE 2024: Reunion',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'December 29, 2024',
+    img: 'assets/imgs/offline-reunion-2024.webp',
+    desc: 'The first nationwide Hololive reunion organized across both Hanoi and Ho Chi Minh City, successfully uniting 300+ fans in a coordinated cross-country celebration.',
+    location: 'Ho Chi Minh City - Hanoi',
+    duration: '8 Hours',
+    attendees: '300+',
+    links: [
+      { label: 'Album 1 (FB)', url: 'https://www.facebook.com/media/set/?set=a.122184987662240990&type=3' },
+      { label: 'Album 2 (FB)', url: 'https://www.facebook.com/media/set/?set=a.122191460072240990&type=3' }
+    ]
+  },
+  {
+    name: 'HOBBY HORIZON: ESCAPE VELOCITY 2024',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'November 2, 2024',
+    img: 'assets/imgs/hobby-horizion-2024.webp',
+    desc: 'A major collaborative event bringing the Hololive community together at the Hobby Horizon: Escape Velocity 2024 festival.',
+    location: 'Ho Chi Minh City',
+    duration: '8 Hours',
+    links: [
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?set=a.122155490024240990&type=3' }
+    ]
+  },
+  {
+    name: 'OFFLINE HOLOLIVE HO CHI MINH 2024',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'September 15, 2024',
+    img: 'assets/imgs/biggest-hcm-offline-2024.webp',
+    desc: 'The landmark achievement for the community—the largest Hololive-only offline event in Ho Chi Minh City with over 160 participants and an 8-hour timeline.',
+    location: 'Ho Chi Minh City',
+    duration: '8 Hours',
+    attendees: '160+',
+    links: [
+      { label: 'Event Album 1', url: 'https://www.facebook.com/media/set/?set=a.122157018212240990&type=3' },
+      { label: 'Event Album 2', url: 'https://www.facebook.com/media/set/?set=a.122171821736240990&type=3' }
+    ]
+  },
+  {
+    name: 'OFFLINE HOLOLIVE DA NANG 2024',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'July 14, 2024',
+    img: 'assets/imgs/danang-2024.webp',
+    desc: 'An intimate and passionate Hololive fan gathering in the heart of Da Nang, marking a successful expansion to central Vietnam.',
+    location: 'Da Nang',
+    duration: '8 Hours',
+    attendees: '70',
+    links: [
+      { label: 'Highlight Post', url: 'https://www.facebook.com/share/p/18PW4L9D6R/' },
+      { label: 'Facebook Album', url: 'https://www.facebook.com/media/set/?vanity=worldlotho&set=a.122147909498240990&type=3' }
+    ]
+  },
+  {
+    name: 'OFFLINE HOLOLIVE HANOI 2023',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'December 24, 2023',
+    img: 'assets/imgs/first-hanoi-offline.webp',
+    desc: "The historic inaugural Hololive fan offline event in Hanoi, attracting over 150 attendees and setting the stage for the community's future in the capital.",
+    location: 'Hanoi',
+    duration: '8 Hours',
+    attendees: '150+',
+    links: [
+      { label: 'Watch Highlights', url: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL' }
+    ]
+  },
+  {
+    name: 'FIRST HOLOLIVE OFFLINE IN HO CHI MINH CITY',
+    type: 'OFFLINE',
+    category: 'HOLOLIVE',
+    date: 'August 6, 2023',
+    img: 'assets/imgs/first-hcm-offline.webp',
+    link: 'https://youtu.be/LwtEW12Exs4?si=vq6mFMYuOdfxOmWH',
+    desc: 'This is the first offline event held in Ho Chi Minh City with a scale of over 150 attendees and an 8-hour timeline, serving as the kickoff for all future WS&F events.',
+    location: 'Ho Chi Minh City',
+    duration: '8 Hours',
+    attendees: '150+'
+  },
 ];
 
 export default async function home() {
-    const html = `
+  const html = `
         <section class="about" id="about">
             <h1 class="title">WORLD SIMP &amp; FRIENDS</h1>
             <p class="desc">ABOUT</p>
@@ -457,5 +457,5 @@ export default async function home() {
         </section>
     `;
 
-    return html;
+  return html;
 }
