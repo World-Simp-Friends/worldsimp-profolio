@@ -17,6 +17,14 @@
     }
 
     @font-face {
+        font-family: 'KH Interference';
+        src: url('../assets/fonts/KHInterferenceTRIAL-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: Noto Sans JP Extra Bold;
         src:
             url('../assets/fonts/NotoSansJP-ExtraBold.woff2') format('woff2');
@@ -330,7 +338,7 @@
         line-height: .7;
         letter-spacing: .04em;
         font-weight: 600;
-        font-family: "Russo One", Nats, sans-serif;
+        font-family: "KH Interference", "Russo One", Nats, sans-serif;
 
     }
 
@@ -403,7 +411,7 @@
         padding: 16px 40px;
         background-color: var(--primary-color);
         color: var(--white-color);
-        font-family: "Russo One", Nats, sans-serif;
+        font-family: "KH Interference", "Russo One", Nats, sans-serif;
         font-size: 4rem;
         font-weight: 800;
         letter-spacing: 0.04em;
@@ -423,7 +431,7 @@
         border-radius: 30px;
         font-size: 2.6rem;
         font-weight: 700;
-        font-family: "Russo One", Nats, sans-serif;
+        font-family: "KH Interference", "Russo One", Nats, sans-serif;
         letter-spacing: 0.04em;
     }
 
@@ -467,7 +475,7 @@
         padding: 18px 48px;
         background-color: var(--primary-color);
         color: var(--white-color);
-        font-family: "Russo One", Nats, sans-serif;
+        font-family: "KH Interference", "Russo One", Nats, sans-serif;
         font-size: 3rem;
         font-weight: 800;
         letter-spacing: 0.04em;
@@ -757,7 +765,7 @@
     }
 
     .contact__card__title {
-        font-family: "Russo One", Nats, sans-serif;
+        font-family: "KH Interference", "Russo One", Nats, sans-serif;
         font-size: 1.8rem;
         color: var(--primary-color);
         letter-spacing: 0.05em;
@@ -883,12 +891,14 @@
         border: 3px solid var(--primary-color);
         border-radius: 20px;
         overflow: hidden;
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         cursor: pointer;
         display: flex;
         flex-direction: column;
         box-shadow: 4px 4px 0px rgba(64, 145, 255, 0.2);
         background-clip: padding-box;
+        will-change: transform, box-shadow;
+        backface-visibility: hidden;
     }
 
     a.project__card:hover {
@@ -1668,6 +1678,8 @@
         opacity: 0;
         transform: translateY(28px);
         transition: opacity 0.55s ease, transform 0.55s ease;
+        will-change: opacity, transform;
+        backface-visibility: hidden;
     }
 
     .fade-in-up.visible {
