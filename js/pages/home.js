@@ -48,7 +48,7 @@ const projects = [
         type: 'OFFLINE',
         category: 'HOLOLIVE',
         date: 'October 26, 2025',
-        img: 'assets/imgs/fantasia.webp',
+        img: 'assets/imgs/off-fan-fantasia.webp',
         desc: 'A vibrant Hololive fan gathering held within the iconic Fantasia - Cosplay Festival in Hanoi, bringing niche passion to the big stage.',
         location: 'Hanoi',
         duration: '8 Hours',
