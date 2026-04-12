@@ -29,6 +29,17 @@ class Router {
                 this.closeMobileNav();
             }
 
+            // Handle "View More" button
+            const viewMoreBtn = e.target.closest('#view-more-btn');
+            if (viewMoreBtn) {
+                const grid = document.querySelector('.projects__grid');
+                if (grid) {
+                    grid.classList.add('is-expanded');
+                    viewMoreBtn.parentElement.style.display = 'none';
+                }
+                return;
+            }
+
             // SPA routing
             const link = e.target.closest('a[data-route]');
             if (!link) return;

@@ -87,6 +87,14 @@ const projects = [
         img: 'assets/imgs/first-hanoi-offline.webp',
         link: 'https://youtu.be/2cjv8_CHgnA?si=eg-kDQVXQclqBwKL'
     },
+    {
+        name: 'FIRST HOLOLIVE OFFLINE IN HCM',
+        type: 'OFFLINE',
+        category: 'HOLOLIVE',
+        date: '6/8/2023',
+        img: 'assets/imgs/first-hcm-offline.webp',
+        link: 'https://youtu.be/LwtEW12Exs4?si=vq6mFMYuOdfxOmWH'
+    },
 ];
 
 export default async function home() {
@@ -162,6 +170,13 @@ export default async function home() {
                     </a>
                 `).join('')}
             </div>
+            
+            <div class="project__view-more">
+                <button id="view-more-btn" class="view-more-btn">
+                    <span>VIEW MORE</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+                </button>
+            </div>
         </section>
 
         <section class="network" id="network">
@@ -213,7 +228,7 @@ export default async function home() {
                         <img src="assets/imgs/wlhvanhungnguoiban.webp" alt="World Lotho And Friends" loading="lazy">
                     </div>
                     <div class="network__card__info">
-                        <h3 class="network__card__name">WORLD LOT HO VA NHUNG NGUOI BAN</h3>
+                        <h3 class="network__card__name">WORLD LOT HO AND&nbsp;FRIENDS</h3>
                         <div class="network__card__socials">
                             <a href="https://www.facebook.com/worldlotho2305" target="_blank" rel="noopener noreferrer" class="network__social" aria-label="Facebook">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -334,4 +349,6 @@ export default async function home() {
             </div>
         </section>
     `;
+
+    return html;
 }

@@ -429,7 +429,8 @@
         word-break: break-word;
         white-space: normal !important;
         display: flex;
-        flex-wrap: wrap; /* Allow title text and line to wrap */
+        flex-wrap: wrap;
+        /* Allow title text and line to wrap */
         align-items: center;
         overflow: visible !important;
     }
@@ -440,7 +441,8 @@
     .content .contact .title::after {
         margin-left: 10px;
         min-width: 20px;
-        flex-shrink: 1; /* Allow the line to shrink if text needs more space */
+        flex-shrink: 1;
+        /* Allow the line to shrink if text needs more space */
     }
 
     .content .about .desc,
@@ -608,9 +610,9 @@
         margin-top: 25px;
         gap: 16px;
     }
-    
+
     .network__card {
-        width: 100%;
+        width: calc(50% - 8px);
     }
 
     .content .network .title,
@@ -687,7 +689,7 @@
     }
 
     .partner__card {
-        width: 100%;
+        width: calc(50% - 8px);
     }
 
     .content .partner .title,
