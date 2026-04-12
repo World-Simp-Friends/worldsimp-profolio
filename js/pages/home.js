@@ -412,6 +412,15 @@ export default async function home() {
                         <h3 class="partner__card__name">STELLAR STEPS</h3>
                     </div>
                 </a>
+
+                <a href="https://www.facebook.com/fantasia.fes" target="_blank" rel="noopener noreferrer" class="partner__card fade-in-up">
+                    <div class="partner__card__img">
+                        <img src="assets/imgs/fantasia.webp" alt="Fantasia" loading="lazy" decoding="async" width="200" height="200">
+                    </div>
+                    <div class="partner__card__info">
+                        <h3 class="partner__card__name">FANTASIA</h3>
+                    </div>
+                </a>
             </div>
         </section>
 
