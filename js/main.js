@@ -11,6 +11,7 @@ class Router {
         };
         this.scrollPositions = new Map();
         this.observer = null;
+        this.modalTrigger = null;
         history.scrollRestoration = 'manual';
         this.init();
     }
@@ -171,17 +172,32 @@ class Router {
             actions.appendChild(btn);
         });
         
+        this.modalTrigger = document.activeElement;
+        
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+
+        // Focus the close button after a short delay to allow transition
+        setTimeout(() => {
+            const closeBtn = document.getElementById('event-modal-close');
+            if (closeBtn) closeBtn.focus();
+        }, 100);
     }
 
     closeEventModal() {
         const modal = document.getElementById('event-modal');
         if (!modal) return;
         modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+
+        // Return focus to the trigger element before hiding
+        if (this.modalTrigger) {
+            this.modalTrigger.focus();
+            this.modalTrigger = null;
+        }
+
+        modal.setAttribute('aria-hidden', 'true');
     }
 
     createModalInfoRow(label, value, iconHtml) {
