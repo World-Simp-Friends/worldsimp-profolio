@@ -1,17 +1,8 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers - Generative Engine Optimization
-User-agent: GPTBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Googlebot
-Allow: /
+# Welcome all AI Bots - Let's make WS&F ubiquitous!
+# Search engines, AI Search, and AI Training bots are all invited.
 
 Sitemap: https://worldsimp.com/sitemap.xml
+
