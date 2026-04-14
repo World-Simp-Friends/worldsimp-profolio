@@ -451,8 +451,12 @@
     .about__item__highlight-block {
         display: inline-block;
         margin-top: 15px;
-        padding: 16px 40px;
+        /* Padding và background được chuyển vào .flip-text bên trong để hỗ trợ animation lật mượt hơn */
+    }
+
+    .about__item__highlight-block .flip-text {
         background-color: var(--primary-color);
+        padding: 16px 40px;
         color: var(--white-color);
         font-family: "KH Interference", "Russo One", Nats, sans-serif;
         font-size: 4rem;
@@ -564,6 +568,119 @@
     .about__icon {
         margin-left: auto;
         position: relative;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    /* Hero Expansion Effect */
+    .about {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about__expansion-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('../assets/imgs/hero.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+        clip-path: circle(0% at var(--mouse-x, 80%) var(--mouse-y, 50%));
+        transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+        will-change: clip-path, opacity;
+    }
+
+    .about__expansion-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);
+        backdrop-filter: blur(2px);
+        z-index: 2;
+    }
+
+    .about.is-hero-active .about__expansion-bg {
+        opacity: 1;
+        clip-path: circle(150% at var(--mouse-x, 80%) var(--mouse-y, 50%));
+    }
+
+    /* Adjust text color and Trigger Flip when hero is active */
+    .about.is-hero-active .title,
+    .about.is-hero-active .desc,
+    .about.is-hero-active .about__item__title,
+    .about.is-hero-active .about__item__highlight-block span {
+        color: white;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .about.is-hero-active .flip-text__inner {
+        transform: rotateX(180deg);
+    }
+
+    /* Logo & Decoration Toggles */
+    .about.is-hero-active .bubble {
+        opacity: 0 !important;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+    }
+
+    /* Flip Text Core Styles */
+    .flip-text {
+        display: inline-block;
+        perspective: 1000px;
+        vertical-align: middle;
+    }
+
+    .flip-text__inner {
+        position: relative;
+        display: grid;
+        transform-style: preserve-3d;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        justify-items: center; /* Căn giữa văn bản trong khối */
+    }
+
+    .flip-text__front,
+    .flip-text__back {
+        grid-area: 1 / 1;
+        display: block;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .flip-text__back {
+        transform: rotateX(180deg);
+        white-space: nowrap; /* Giữ chữ trên một dòng khi lật */
+    }
+
+    /* Specific adjustments for blocks */
+    .about__item__highlight-block .flip-text {
+        width: auto; /* Trả lại auto để khối xanh co giãn theo chữ */
+        display: inline-block;
+    }
+
+    /* Staggered Timing - Nhịp điệu lật so le */
+    .desc .flip-text__inner {
+        transition-delay: 0.15s;
+    }
+
+    .title .flip-text__inner {
+        transition-delay: 0.3s;
+    }
+
+    .about__item__title .flip-text__inner {
+        transition-delay: 0.45s;
+    }
+
+    .about__item__highlight-block .flip-text__inner {
+        transition-delay: 0.6s;
+    }
+
+    /* Reverse Stagger - Khi unhover, lật lại nhanh hơn hoặc đồng loạt */
+    .about:not(.is-hero-active) .flip-text__inner {
+        transition-delay: 0s !important;
     }
 
     .wrap__icon {
@@ -574,16 +691,63 @@
         width: 400px;
         height: 400px;
         border-radius: 100%;
-        background-color: #7AB5FF;
         overflow: hidden;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 10;
+    }
+
+    /* Pseudo-element for the blue background circle */
+    .wrap__icon::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #7AB5FF;
+        border-radius: 100%;
+        z-index: -1;
+        transition: opacity 0.6s ease;
+    }
+
+    .about.is-hero-active .wrap__icon {
+        transform: scale(1.05);
+    }
+
+    .about.is-hero-active .wrap__icon::before {
+        opacity: 0;
     }
 
     .wrap__icon img {
         position: absolute;
-        object-fit: cover;
+        inset: 0;
         width: 100%;
         height: 100%;
-        border-radius: 100%;
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+    }
+
+    .about__hero-img {
+        object-fit: cover;
+    }
+
+    .about__logo-img {
+        object-fit: contain;
+        opacity: 0;
+        padding: 15%;
+    }
+
+    .about.is-hero-active .about__hero-img {
+        opacity: 0;
+        filter: blur(8px);
+    }
+
+    .about.is-hero-active .about__logo-img {
+        opacity: 1;
+    }
+
+    /* Ensure other elements are above background but below icon if needed */
+    .about .title, 
+    .about .desc, 
+    .about__wrapper {
+        position: relative;
+        z-index: 5;
     }
 
 

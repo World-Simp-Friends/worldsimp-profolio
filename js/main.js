@@ -382,7 +382,10 @@ class Router {
             // Active nav + animations after render
             this.setActiveNavLink();
             this.closeMobileNav();
-            setTimeout(() => this.initScrollAnimations(), 50);
+            setTimeout(() => {
+                this.initScrollAnimations();
+                this.initHeroHover();
+            }, 50);
 
             if (this.isInitialLoad) {
                 setTimeout(() => {
@@ -401,6 +404,33 @@ class Router {
         }
 
         this.contentDiv.classList.remove('fade-out');
+    }
+
+    initHeroHover() {
+        const aboutSection = document.querySelector('.about');
+        const heroIcon = document.querySelector('.about__icon');
+        if (!aboutSection || !heroIcon) return;
+
+        const updatePosition = () => {
+            const rect = aboutSection.getBoundingClientRect();
+            const iconRect = heroIcon.getBoundingClientRect();
+            const x = ((iconRect.left + iconRect.width / 2) - rect.left) / rect.width * 100;
+            const y = ((iconRect.top + iconRect.height / 2) - rect.top) / rect.height * 100;
+            aboutSection.style.setProperty('--mouse-x', `${x}%`);
+            aboutSection.style.setProperty('--mouse-y', `${y}%`);
+        };
+
+        heroIcon.addEventListener('mouseenter', () => {
+            const isPC = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (!isPC || window.innerWidth <= 1024) return;
+            
+            updatePosition();
+            aboutSection.classList.add('is-hero-active');
+        });
+
+        aboutSection.addEventListener('mouseleave', () => {
+            aboutSection.classList.remove('is-hero-active');
+        });
     }
 }
 

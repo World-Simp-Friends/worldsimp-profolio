@@ -174,15 +174,34 @@ const projects = [
 export default async function home() {
   const html = `
         <section class="about" id="about">
-            <h1 class="title">WORLD SIMP &amp; FRIENDS</h1>
-            <p class="desc">ABOUT</p>
+            <div class="about__expansion-bg"></div>
+            <h1 class="title flip-text">
+                <span class="flip-text__inner">
+                    <span class="flip-text__front">WORLD SIMP &amp; FRIENDS</span>
+                    <span class="flip-text__back">TURNING DREAMS REAL</span>
+                </span>
+            </h1>
+            <p class="desc flip-text">
+                <span class="flip-text__inner">
+                    <span class="flip-text__front">ABOUT</span>
+                    <span class="flip-text__back">LEGACY</span>
+                </span>
+            </p>
             <div class="about__wrapper">
                 <div class="about__item">
-                    <p class="about__item__title">
-                        We don't Just Organize Events
+                    <p class="about__item__title flip-text">
+                        <span class="flip-text__inner">
+                            <span class="flip-text__front">We don't Just Organize Events</span>
+                            <span class="flip-text__back">Built by Fans, For THE Fans</span>
+                        </span>
                     </p>
                     <div class="about__item__highlight-block">
-                        <span>We Create Memories</span>
+                        <span class="flip-text">
+                            <span class="flip-text__inner">
+                                <span class="flip-text__front">We Create Memories</span>
+                                <span class="flip-text__back">No Boundary, Only Love</span>
+                            </span>
+                        </span>
                     </div>
                     <div class="about__item__blocks">
                         <span class="about__block">Events</span>
@@ -192,7 +211,8 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration" class="about__hero-img" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/logo.webp" alt="WS&F Logo" class="about__logo-img" fetchpriority="high" decoding="async" width="800" height="800">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
