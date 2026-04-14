@@ -2187,8 +2187,8 @@
     .event-modal__container {
         position: relative;
         width: 90%;
-        max-width: 600px;
-        max-height: 90vh;
+        max-width: 850px;
+        max-height: 92vh;
         background-color: var(--white-color);
         border: 3px solid var(--primary-color);
         border-radius: 20px;
@@ -2252,7 +2252,7 @@
 
     .event-modal__cover {
         width: 100%;
-        height: 240px;
+        height: 350px;
         position: relative;
         overflow: hidden;
     }
@@ -2288,7 +2288,7 @@
     }
 
     .event-modal__title {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         font-weight: 700;
         font-family: "KH Interference", sans-serif;
         color: var(--primary-color);
@@ -2324,7 +2324,7 @@
     }
 
     .event-info-label {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #7AB5FF;
         text-transform: uppercase;
         font-weight: 700;
@@ -2333,16 +2333,16 @@
     }
 
     .event-info-value {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         color: #444;
         font-weight: 600;
         margin-top: 2px;
     }
 
     .event-modal__desc {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         color: #555;
-        line-height: 1.6;
+        line-height: 1.7;
         border-top: 2px solid var(--primary-color);
         padding-top: 16px;
         white-space: pre-line;
@@ -2365,7 +2365,7 @@
         border: 3px solid var(--primary-color);
         color: var(--primary-color);
         font-family: "KH Interference", sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 700;
         text-decoration: none;
         text-transform: uppercase;
