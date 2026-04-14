@@ -20,6 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://worldsimp.com/">
     <meta property="og:title" content="WS&F — World Simp & Friends | Premier VTuber Offline Events">
+    <meta property="og:site_name" content="World Simp & Friends">
     <meta property="og:description"
         content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
     <!-- MUST be Absolute URL for correct OG Scraping -->
@@ -41,7 +42,6 @@
     
     <!-- Preload Critical Assets -->
     <link rel="preload" href="/assets/fonts/KHInterferenceTRIAL-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/assets/fonts/NATS-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/imgs/hero.webp" as="image" fetchpriority="high">
     <link rel="preload" href="/assets/imgs/logo.webp" as="image">
 
@@ -60,19 +60,79 @@
 
     <!-- JSON-LD Schema (E-E-A-T & Google Knowledge Graph) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "World Simp & Friends",
-      "alternateName": "WS&F",
-      "url": "https://worldsimp.com",
-      "logo": "https://worldsimp.com/assets/imgs/logo.webp",
-      "description": "Organizing premier Hololive, VTuber, and Anime community events.",
-      "sameAs": [
-        "https://www.facebook.com/worldsimp.and.friends",
-        "https://discord.gg/your-discord-link"
-      ]
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "World Simp & Friends",
+        "alternateName": ["WS&F", "World Simp Friends"],
+        "url": "https://worldsimp.com",
+        "logo": "https://worldsimp.com/assets/imgs/logo.webp",
+        "image": "https://worldsimp.com/assets/imgs/metadata.webp",
+        "description": "World Simp & Friends (WS&F) is a premier community organizing offline events for Hololive, VTubers, Anime, and pop culture fans.",
+        "email": "admin@worldsimp.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "admin@worldsimp.com",
+          "contactType": "customer support"
+        },
+        "sameAs": [
+          "https://www.facebook.com/worldsimp235",
+          "https://www.facebook.com/worldsimp/",
+          "https://www.facebook.com/groups/odaychungtoisimpholo",
+          "https://www.facebook.com/odaychungtoisimpHolo/",
+          "https://www.facebook.com/groups/thegioivtuber",
+          "https://www.facebook.com/worldlotho",
+          "https://www.facebook.com/worldlotho2305",
+          "https://www.youtube.com/@WorldLotHo",
+          "https://www.youtube.com/channel/UC0ZGGBx7t5B2vKPXVnOXghA",
+          "https://www.tiktok.com/@worldlotho",
+          "https://x.com/wlh_holofanvn",
+          "https://discord.gg/vA3BaeHkGg"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "World Simp & Friends",
+        "url": "https://worldsimp.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://worldsimp.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "World Simp & Friends (WS&F) là gì?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "World Simp & Friends (WS&F) là một cộng đồng tiên phong chuyên tổ chức các sự kiện offline cho người hâm mộ Hololive, VTuber, Anime và văn hóa đại chúng tại Việt Nam. Chúng tôi kết nối niềm đam mê và tạo ra những trải nghiệm cộng đồng không thể quên."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "WS&F thường tổ chức các sự kiện ở đâu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WS&F thường xuyên tổ chức các buổi offline fan, sự kiện cộng đồng tại các thành phố lớn như Hà Nội, TP. Hồ Chí Minh và Đà Nẵng, thường là tại các hội chợ cosplay lớn hoặc các không gian sự kiện riêng tư."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Làm thế nào để tham gia vào cộng đồng WS&F?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bạn có thể tham gia vào cộng đồng của chúng tôi thông qua các trang Facebook chính thức, các nhóm cộng đồng trên Facebook (như 'Ở đây chúng tôi simp Holo') hoặc máy chủ Discord chính thức của WS&F."
+            }
+          }
+        ]
+      }
+    ]
     </script>
 
     <style>

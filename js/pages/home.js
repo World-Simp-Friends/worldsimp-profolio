@@ -211,8 +211,8 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.webp" alt="WS&F team illustration" class="about__hero-img" fetchpriority="high" decoding="async" width="800" height="800">
-                        <img src="assets/imgs/logo.webp" alt="WS&F Logo" class="about__logo-img" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/hero.webp" alt="WS&F Community Illustration - Connecting VTuber Fans in Vietnam" class="about__hero-img" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/logo.webp" alt="Official World Simp & Friends (WS&F) Logo - Premier VTuber Event Organizer" class="about__logo-img" fetchpriority="high" decoding="async" width="800" height="800">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
@@ -227,7 +227,7 @@ export default async function home() {
             <p class="desc">Who We Are</p>
             <div class="about-detail__content">
                 <p class="about-detail__text">
-                    World Simp and&nbsp;Friends is a community event organizing team, focused on fandom culture, entertainment, and creative experiences.
+                    World Simp and&nbsp;Friends (WS&F) is a premier community event organizing team in Vietnam, focused on Hololive, VTuber fandom culture, entertainment, and creative offline experiences.
                 </p>
                 <p class="about-detail__text">
                     We build spaces where people can connect, share their passions, and enjoy unforgettable moments together.
