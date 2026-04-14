@@ -93,13 +93,13 @@
     }
 
     .title {
-        font-size: 10.4rem !important;
+        font-size: 4.8rem !important; /* Reduced from 10.4rem to fit mobile screen */
     }
 
     .content .about .desc,
     .content .works .desc,
     .content .contact .desc {
-        font-size: 4rem;
+        font-size: 2.2rem; /* Reduced from 4rem */
     }
 
     .page__credit__title,
@@ -318,7 +318,8 @@
     .about__item__title,
     .about__item__title span {
         text-align: center;
-        font-size: 2.8rem;
+        font-size: 1.9rem; /* Further reduced from 2.2rem */
+        letter-spacing: 0;
     }
 
     .about__item__blocks {
@@ -333,8 +334,12 @@
     }
 
     .about__item__highlight-block {
-        font-size: 2.6rem;
-        padding: 12px 28px;
+        padding: 10px 20px;
+    }
+
+    .about__item__highlight-block .flip-text {
+        font-size: 1.8rem !important; /* Further reduced from 2.0rem */
+        letter-spacing: 0;
     }
 
     .about-detail__text {
@@ -546,7 +551,6 @@
     .copy {
         font-size: 1.35rem;
         line-height: 1.5;
-        opacity: 0.9;
     }
 
     .page__artist {

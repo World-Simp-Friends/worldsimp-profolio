@@ -36,10 +36,6 @@
         content="The biggest VTuber event community organizer. Connect your passion and blaze through unforgettable offline gatherings.">
     <meta name="twitter:image" content="https://worldsimp.com/assets/imgs/metadata.webp">
 
-    <!-- Resource Hints & Preconnects for Web Vitals Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <!-- Preload Critical Assets -->
     <link rel="preload" href="/assets/fonts/KHInterferenceTRIAL-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/assets/imgs/hero.webp" as="image" fetchpriority="high">
@@ -301,7 +297,7 @@
         <div class="global-loader__content">
             <div class="global-loader__logo-wrapper">
                 <div class="global-loader__ring"></div>
-                <img src="/assets/imgs/logo.webp" alt="Loading Logo" class="global-loader__logo">
+                <img src="/assets/imgs/logo.webp" alt="Loading Logo" class="global-loader__logo" fetchpriority="high">
             </div>
             <div class="global-loader__text">Loading</div>
         </div>
@@ -311,7 +307,10 @@
         <header class="header" role="banner">
             <a data-route="home" href="/home" class="header__title" aria-label="WS&F — Home">
                 <div class="logo">
-                    <img src="/assets/imgs/logo.webp" alt="WS&F Logo" width="50" height="50">
+                    <img src="/assets/imgs/logo.webp" 
+                         srcset="/assets/imgs/logo-mobile.webp 256w, /assets/imgs/logo.webp 922w" 
+                         sizes="(max-width: 600px) 256px, 922px" 
+                         alt="WS&F Logo" width="50" height="50">
                 </div>
                 <!-- <p aria-hidden="true">WS&F</p> -->
             </a>

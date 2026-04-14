@@ -180,7 +180,7 @@
         --surface: #f0f5ff;
         --surface-alt: #e6f0ff;
         --on-primary: #FFFFFF;
-        --text-muted: rgba(64, 145, 255, 0.65);
+        --text-muted: #2c6ed4; /* Increased contrast from rgba(64, 145, 255, 0.65) */
         /* Legacy aliases */
         --primary-color: #4091FF;
         --white-color: #FFFFFF;
@@ -224,21 +224,7 @@
         --transition-slow: 600ms ease;
     }
 
-    a,
-    body,
-    button,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    span {
-        font-weight: 700;
-        letter-spacing: .06em;
-        font-feature-settings: normal;
-    }
+    a,body,button,h1,h2,h3,h4,h5,h6,p,span{font-weight:700;letter-spacing:.06em;font-feature-settings:normal;}
 
     .header {
         position: sticky;

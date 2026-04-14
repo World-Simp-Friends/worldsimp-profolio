@@ -71,6 +71,9 @@ class Router {
             if (e.key === 'Escape') this.closeMobileNav();
         });
 
+        // Initialize mobile nav accessibility
+        this.updateMobileNavAccessibility(false);
+
         window.addEventListener('popstate', () => this.handleRouteChange());
         window.addEventListener('beforeunload', () => this.saveScrollPosition());
         
@@ -205,6 +208,7 @@ class Router {
             nav.classList.add('open');
             btn.setAttribute('aria-expanded', 'true');
             nav.setAttribute('aria-hidden', 'false');
+            this.updateMobileNavAccessibility(true);
             document.body.style.overflow = 'hidden';
         }
     }
@@ -217,7 +221,15 @@ class Router {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         nav.setAttribute('aria-hidden', 'true');
+        this.updateMobileNavAccessibility(false);
         document.body.style.overflow = '';
+    }
+
+    updateMobileNavAccessibility(isOpen) {
+        const navLinks = document.querySelectorAll('.mobile-nav a');
+        navLinks.forEach(link => {
+            link.setAttribute('tabindex', isOpen ? '0' : '-1');
+        });
     }
 
     setActiveNavLink() {

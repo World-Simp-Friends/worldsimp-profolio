@@ -211,8 +211,14 @@ export default async function home() {
                 </div>
                 <div class="about__icon">
                     <div class="wrap__icon">
-                        <img src="assets/imgs/hero.webp" alt="WS&F Community Illustration - Connecting VTuber Fans in Vietnam" class="about__hero-img" fetchpriority="high" decoding="async" width="800" height="800">
-                        <img src="assets/imgs/logo.webp" alt="Official World Simp & Friends (WS&F) Logo - Premier VTuber Event Organizer" class="about__logo-img" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/hero.webp" 
+                             srcset="assets/imgs/hero-mobile.webp 450w, assets/imgs/hero.webp 900w" 
+                             sizes="(max-width: 600px) 450px, 900px" 
+                             alt="WS&F Community Illustration - Connecting VTuber Fans in Vietnam" class="about__hero-img" fetchpriority="high" decoding="async" width="800" height="800">
+                        <img src="assets/imgs/logo.webp" 
+                             srcset="assets/imgs/logo-mobile.webp 256w, assets/imgs/logo.webp 922w" 
+                             sizes="(max-width: 600px) 256px, 922px" 
+                             alt="Official World Simp & Friends (WS&F) Logo - Premier VTuber Event Organizer" class="about__logo-img" fetchpriority="high" decoding="async" width="800" height="800">
                     </div>
                     <div class="bubble"></div>
                     <div class="bubble"></div>
