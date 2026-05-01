@@ -1,5 +1,13 @@
 
     @font-face {
+        font-family: 'WLH Test';
+        src: url('../assets/fonts/wlhtest.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: Russo One;
         src:
             url('../assets/fonts/RussoOne-Regular.woff2') format('woff2');
@@ -59,7 +67,7 @@
 
     html {
         font-size: 62.5%;
-        font-family: "KH Interference", "Russo One", sans-serif;
+        font-family: "WLH Test", "KH Interference", "Russo One", sans-serif;
         font-weight: 400;
         line-height: 1.5;
         scroll-behavior: smooth;
@@ -167,7 +175,7 @@
     span,
     li,
     a {
-        font-family: "KH Interference", sans-serif;
+        font-family: "WLH Test", sans-serif;
         font-weight: 400;
     }
 
@@ -959,12 +967,11 @@
 
     .contact__mail__text,
     .contact__card__desc {
-        font-size: 2.4rem;
+        font-size: clamp(1.8rem, 2.5vw, 2.4rem);
         font-weight: 700;
         color: var(--font-color);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow-wrap: break-word;
         margin-bottom: 8px;
     }
 
@@ -986,6 +993,8 @@
         font-size: 2rem;
         text-align: center;
         color: var(--white-color);
+        font-family: "KH Interference", sans-serif;
+        font-weight: 700;
     }
 
 
