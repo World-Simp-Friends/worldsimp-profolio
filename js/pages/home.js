@@ -5,7 +5,7 @@ const projects = [
     category: 'BanG Dream!',
     date: 'July 11, 2026',
     img: 'assets/imgs/itsmygo.webp',
-    desc: 'Tiếp tục hỗ trợ fandom BanG Dream! và làm việc với bên bản quyền và bên cụm rạp.',
+    desc: 'Continuing to support the BanG Dream! fandom by collaborating with copyright holders and theater chains.',
     location: 'Ho Chi Minh City - Hanoi',
     attendees: '400+',
     links: [
@@ -15,12 +15,12 @@ const projects = [
     ]
   },
   {
-    name: 'Thập Niên Hẹn Ước: Ngày Trở Về',
+    name: '10-Year Promise: The Return',
     type: 'OFFLINE',
     category: 'Assassination Classroom',
     date: 'June 7, 2026',
     img: 'assets/imgs/lophocamsat.webp',
-    desc: 'Lần đầu tiên WS&F thử sức làm Offline và Fan Screening tại rạp cho 1 fandom lớn ở Việt Nam và kết nối làm việc với bản quyền anime và hệ thống rạp.',
+    desc: 'WS&F\\'s first time organizing an offline event and fan screening at cinemas for a major fandom in Vietnam, collaborating with anime licensors and theater chains.',
     location: 'Ho Chi Minh City - Hanoi',
     attendees: '300+',
     links: [
