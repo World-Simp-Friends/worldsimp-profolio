@@ -2228,6 +2228,8 @@
         display: flex;
         flex-direction: column;
         overflow-y: auto;
+        flex: 1;
+        min-height: 0;
     }
 
     .event-modal__content::-webkit-scrollbar {
