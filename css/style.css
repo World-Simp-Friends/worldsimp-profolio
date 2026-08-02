@@ -1182,6 +1182,8 @@
         line-height: 1.4;
         text-transform: uppercase;
         box-shadow: 2px 2px 0px rgba(64, 145, 255, 0.2);
+        white-space: normal;
+        text-align: center;
     }
 
     .project__type {
@@ -2272,6 +2274,7 @@
     .event-modal__badges {
         display: flex;
         gap: 10px;
+        flex-wrap: wrap;
     }
 
     .event-modal__title {
