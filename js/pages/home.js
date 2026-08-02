@@ -1,5 +1,35 @@
 const projects = [
   {
+    name: "Fan Screening BanG Dream! It's MyGO!!!!! Movie | Part 2",
+    type: 'OFFLINE',
+    category: 'BanG Dream!',
+    date: 'July 11, 2026',
+    img: 'assets/imgs/itsmygo.webp',
+    desc: 'Tiếp tục hỗ trợ fandom BanG Dream! và làm việc với bên bản quyền và bên cụm rạp.',
+    location: 'Ho Chi Minh City - Hanoi',
+    attendees: '400+',
+    links: [
+      { label: 'Co-organizer', url: 'https://www.facebook.com/stellarsteps.event' },
+      { label: 'HCMC Photos', url: 'https://drive.google.com/drive/folders/108z1eIoMuDDDVot3br_vEm0yOpASMSHH' },
+      { label: 'Hanoi Photos', url: 'https://drive.google.com/drive/folders/1bZDwayC-WMx9B2Zf_YPgUCy0QqjwJXnD' }
+    ]
+  },
+  {
+    name: 'Thập Niên Hẹn Ước: Ngày Trở Về',
+    type: 'OFFLINE',
+    category: 'Assassination Classroom',
+    date: 'June 7, 2026',
+    img: 'assets/imgs/lophocamsat.webp',
+    desc: 'Lần đầu tiên WS&F thử sức làm Offline và Fan Screening tại rạp cho 1 fandom lớn ở Việt Nam và kết nối làm việc với bản quyền anime và hệ thống rạp.',
+    location: 'Ho Chi Minh City - Hanoi',
+    attendees: '300+',
+    links: [
+      { label: 'Co-organizer', url: 'https://www.facebook.com/LHAS.AK.VNFanpage' },
+      { label: 'HCMC Photos', url: 'https://drive.google.com/drive/folders/1_VqpbaclwaRV7myDaFH6_8PY1V9OcqXU' },
+      { label: 'Hanoi Photos', url: 'https://drive.google.com/drive/folders/1K8OHnUp4KEL7z-60zfsT8WVT_axcR1Ef' }
+    ]
+  },
+  {
     name: 'WELCOME OLLIE AND SHIORI TO VIETNAM',
     type: 'COMMUNITY',
     category: 'HOLOLIVE',
