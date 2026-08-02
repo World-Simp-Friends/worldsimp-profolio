@@ -20,7 +20,7 @@ const projects = [
     category: 'Assassination Classroom',
     date: 'June 7, 2026',
     img: 'assets/imgs/lophocamsat.webp',
-    desc: 'WS&F\\'s first time organizing an offline event and fan screening at cinemas for a major fandom in Vietnam, collaborating with anime licensors and theater chains.',
+    desc: "WS&F's first time organizing an offline event and fan screening at cinemas for a major fandom in Vietnam, collaborating with anime licensors and theater chains.",
     location: 'Ho Chi Minh City - Hanoi',
     attendees: '300+',
     links: [
