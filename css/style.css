@@ -1168,6 +1168,7 @@
 
     .project__card__badges {
         display: flex;
+        align-items: center;
         gap: 8px;
         flex-wrap: wrap;
     }
@@ -1196,6 +1197,13 @@
         color: var(--primary-color);
         border: 2px solid var(--primary-color);
         background-color: transparent;
+    }
+
+    .project__category.project__category--long {
+        padding-inline: 8px;
+        padding-block: 6px 4px;
+        font-size: clamp(1rem, 1.1vw, 1.7rem);
+        white-space: nowrap;
     }
 
     /* VIEW MORE BUTTON */

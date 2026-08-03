@@ -289,7 +289,7 @@ export default async function home() {
                         <div class="project__card__content">
                             <div class="project__card__badges">
                                 <span class="project__type">${project.type}</span>
-                                <span class="project__category">${project.category}</span>
+                                <span class="project__category${project.category.length > 16 ? ' project__category--long' : ''}">${project.category}</span>
                             </div>
                             <div class="project__card__info">
                                 <h3 class="project__name">${project.name}</h3>
