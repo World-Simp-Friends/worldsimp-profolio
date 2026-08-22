@@ -800,6 +800,7 @@
     
     .event-modal__cover {
         height: 200px;
+        flex-shrink: 0;
     }
     
     .event-modal__body {
